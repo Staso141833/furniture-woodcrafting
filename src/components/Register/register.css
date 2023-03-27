@@ -1,0 +1,214 @@
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
+
+/* 
+light-chocolate: #E88228,
+dark-chocolate: #8E4D13,
+
+ */
+
+ body {
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    /* background: linear-gradient(45deg, #ff8b0f69, #09ec4274); */
+  }
+  
+  .form-conainter {
+    position: absolute;
+    max-width: 400px;
+    max-height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .form-register {
+   background: rgba(105, 41, 41, 0);
+    padding: 3em;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(2px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+  } 
+  
+  .form-register h2 {
+    margin-bottom: 24px;
+    font-size: 28px;
+  }
+  
+  .form-register p {
+    font-weight: 500;
+    color: #d57617;
+    opacity: 0.7;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .already-registered p a {
+    text-decoration: none;
+    color: #0a0a0a;
+    font-size: 12px;
+    font-size: 18px;
+  }
+  
+  .already-registered p a:hover {
+    text-shadow: 2px 2px 6px #1a111188;
+  }
+  
+  .already-registered p a:active {
+    text-shadow: none;
+  }
+  
+  .form-register input {
+    background: transparent;
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 20px;
+    border: none;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    border-radius: 50px;
+    backdrop-filter: blur(2px);
+    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+    color: #8E4D13;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  
+  }
+  .form-register input:hover {
+    background: rgba(255, 255, 255, 0.367);
+    box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
+  }
+  
+  .form-register input [type="email"],
+  .form-register input [type="password"]:focus {
+      background: rgba(255, 255, 255, 0.902);
+      box-shadow: 4px 4px 60px 8px rgba(46, 219, 52, 0.855);
+  }
+  
+  
+  
+  .form-register button {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    width: 80%;
+    border-radius: 8px;
+    background-color: rgba(17, 111, 57, 0.611);
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 16px;
+    color: #171616;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 4px 4px 40px 8px rgba(17, 111, 57, 0.611);
+  }
+  
+  .form-register button:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px 40px 8px rgba(207, 87, 12, 0.454);
+  }
+  
+  .form-register button:active {
+    background: rgba(207, 87, 12, 0.454);
+  }
+  
+  .form-register:hover {
+    margin: 4px;
+  }
+  
+  .form-register input::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #63a23ff1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  .drop {
+    background: linear-gradient(45deg, #ff8b0f69, #09ec4274);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    transition: all 0.2s ease;
+  }
+  
+  .drop-1 {
+    height: 80px;
+    width: 80px;
+    top: -20px;
+    left: -40px;
+    z-index: -1;
+  }
+  
+  .drop-2 {
+    height: 80px;
+    width: 80px;
+    bottom: -30px;
+    right: -10px;
+  }
+  
+  .drop-3 {
+    height: 100px;
+    width: 100px;
+    bottom: 120px;
+    right: -50px;
+    z-index: -1;
+  }
+  
+  .drop-4 {
+    height: 120px;
+    width: 120px;
+    top: -60px;
+    right: -60px;
+  }
+  
+  .drop-5 {
+    height: 60px;
+    width: 60px;
+    bottom: 170px;
+    left: 90px;
+    z-index: -1;
+  }
+  .drop-6 {
+    height: 60px;
+    width: 120px;
+    bottom: 20px;
+    left: -30px;
+    z-index: -3;
+  }
+  
+  .drop-7 {
+    height: 60px;
+    width: 80px;
+    bottom: 260px;
+    left: -40px;
+    z-index: 1;
+  }
+  
+  a,
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  
+  .message a {
+    margin-left: 8px;
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+  }
+  .message i {
+      margin-left: 8px;
+  }
+  

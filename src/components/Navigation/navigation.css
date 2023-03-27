@@ -1,0 +1,98 @@
+body {
+    color: rgb(219, 119, 37);
+    /* background: rgba(214, 116, 5, 0.431); */
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    width: 97vw;
+    font-family: 'Alkalami', serif;
+  font-family: 'Kaushan Script', cursive;
+  }
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 4px 160px;
+}
+
+.social-media-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.social-media {
+ margin-top: 24px;
+
+}
+
+.social-media a i {
+    font-size: 26px;
+}
+
+.fab.fa-facebook-f {
+    color: blue;
+}
+
+.fab.fa-twitter {
+    color:rgb(0, 174, 255);
+}
+
+.fab.fa-linkedin-in {
+    color: rgb(0, 183, 255);
+}
+
+.fab.fa-instagram {
+    color:blueviolet;
+}
+
+.fab.fa-youtube {
+    color: red;
+}
+
+
+
+.logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.social-media {
+    display: flex;
+    gap: 8px;
+   
+}
+
+.social-media a i {
+    color: black;
+}
+
+.nav-ul {
+    display: flex;
+    gap: 42px;
+    margin-top: 24px;
+}
+.nav-items {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.nav-items a {
+    font-family: "woodFont4", "Courier New", "Courier", "monospace";
+  font-weight: bold;
+  padding: 0px 5px;
+  font-size: 28px;
+  text-decoration: none;
+  color: brown;
+  background-color: white;
+  border-radius: 8px;
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
+
+.nav-items a:hover {
+    background-color: brown;
+    color: white;
+}
