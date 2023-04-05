@@ -1,5 +1,7 @@
-import navigation from "./navigation.css"
+import "./navigation.css"
 import { Link } from "react-router-dom";
+// import "https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+
 
 export const Navigation = () => {
     return (
@@ -31,21 +33,23 @@ export const Navigation = () => {
           <nav>
         
             <ul className="nav-ul">
-              <li className="nav-items"><a href="/">Home</a></li>
+              <li className="nav-items"><Link to="/">Home</Link></li>
               <li className="nav-items"><Link to="/login">Login</Link></li>
-              <li className="nav-items"><a href="/register">Register</a></li>
+              <li className="nav-items"><Link to="/register">Register</Link></li>
+              <li className="nav-items"><Link to="/add-furniture">Create product</Link></li>
+              <li className="nav-items"><Link to="/details/:furnitureId">Details</Link></li>
+              <li className="nav-items"><Link to="/edit">Edit</Link></li>
               <li className="nav-items-dropbtn">   <div className="dropdown">
                 <button className="dropbtn">Products</button>
                 <div className="dropdown-content">
-                  <a href="/">Kitchens</a>
-                  <a href="/">Bedrooms</a>
-                  <a href="/">Woodcrafts</a>
+                  <Link to="/kitchens">Kitchens</Link>
+                  <Link to="/bedrooms">Bedrooms</Link>
+                  <Link to="/woodcarvs">Woodcarvs</Link>
+                  <Link to="/catalog">Catalog</Link>
                 </div>
               </div></li>
 
-           
-              <li className="nav-items"><a href="/">About us</a></li>
-              <li className="nav-items"><a href="/">Contacts</a></li>
+
             </ul>
           </nav>
         </div>

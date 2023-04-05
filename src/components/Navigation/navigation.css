@@ -1,98 +1,154 @@
+/*
+colors {
+    blackBrown: #6f3f21,
+    darkBrown: #77472b,
+    brown: #93582c,
+    whiteBrown: #ffcf91,
+}
+*/
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-    color: rgb(219, 119, 37);
-    /* background: rgba(214, 116, 5, 0.431); */
-    margin: auto;
-    padding: 0;
-    overflow: auto;
-    width: 97vw;
-    font-family: 'Alkalami', serif;
-  font-family: 'Kaushan Script', cursive;
-  }
+  font-family: "woodFont4", "Courier New", "Courier", "monospace";
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  font-size: 0px;
+}
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 4px 160px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
 }
 
 .social-media-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 18px;
 }
 
 .social-media {
- margin-top: 24px;
-
+  margin-top: 24px;
 }
 
 .social-media a i {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .fab.fa-facebook-f {
-    color: blue;
+  /* color: blue; */
+  color: #93582c;
 }
 
 .fab.fa-twitter {
-    color:rgb(0, 174, 255);
+  /* color: rgb(0, 174, 255); */
+  color: #93582c;
 }
 
 .fab.fa-linkedin-in {
-    color: rgb(0, 183, 255);
+  /* color: rgb(0, 183, 255); */
+  color: #93582c;
 }
 
 .fab.fa-instagram {
-    color:blueviolet;
+  /* color: blueviolet; */
+  color: #93582c;
 }
 
 .fab.fa-youtube {
-    color: red;
+  /* color: red; */
+  color: #93582c;
 }
 
-
-
 .logo img {
-    width: 80px;
-    height: 80px;
+  width: 70px;
+  height: 70px;
+  margin: 4px;
 }
 
 .social-media {
-    display: flex;
-    gap: 8px;
-   
+  display: flex;
+  gap: 12px;
 }
 
 .social-media a i {
-    color: black;
+  color: black;
 }
 
 .nav-ul {
-    display: flex;
-    gap: 42px;
-    margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 26px;
+  margin-top: 28px;
 }
 .nav-items {
-    text-decoration: none;
-    list-style: none;
-
+  text-decoration: none;
+  list-style: none;
 }
 
-.nav-items a {
-    font-family: "woodFont4", "Courier New", "Courier", "monospace";
+.nav-items a,
+.dropbtn {
+  font-family: "woodFont4", "Courier New", "Courier", "monospace";
   font-weight: bold;
   padding: 0px 5px;
-  font-size: 28px;
+  font-size: 20px;
+  text-transform: uppercase;
   text-decoration: none;
-  color: brown;
-  background-color: white;
+  color: #6f3f21;
   border-radius: 8px;
   transition: width 1s, height 1s, background-color 1s, transform 1s;
+  border: none;
 }
 
 .nav-items a:hover {
-    background-color: brown;
-    color: white;
+  background-color: #77472b;
+  color: white;
+}
+
+.dropbtn:hover {
+  background-color: #77472b;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ffcf9100;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  text-transform: uppercase;
+  box-shadow: 0px 8px 16px 0px rgba(181, 98, 10, 0.238);
+  z-index: 1;
+  font-size: 18px;
+}
+
+.dropdown-content a {
+  color: #77472b;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #77472b;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

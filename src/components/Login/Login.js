@@ -1,4 +1,4 @@
-import login from "./login.css";
+import "./login.css";
 
 export const Login = () => {
     return (
@@ -21,13 +21,6 @@ export const Login = () => {
               name="password"
               id="email-password"
               placeholder="password"
-            />
-
-            <input
-              type="password"
-              name="re-password"
-              id="email-re-password"
-              placeholder="re-password"
             />
 
             <button className="btn-login" type="submit">Login</button>

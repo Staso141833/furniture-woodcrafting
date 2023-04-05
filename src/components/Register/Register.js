@@ -1,4 +1,4 @@
-import register from "./register.css";
+import "./register.css";
 
 export const Register = () => {
     return (
@@ -7,7 +7,7 @@ export const Register = () => {
 
      
           <form className="form-register">
-              <h2>Welcome</h2>
+              <h2>Register</h2>
               <h3>Register to get the best offers!</h3>
             <input
               type="email"

@@ -1,0 +1,55 @@
+/*
+colors {
+     blackBrown: #6f3f21,
+    darkBrown: #77472b,
+    brown: #93582c,
+    whiteBrown: #ffcf91,
+}
+*/
+
+body {
+    box-sizing: border-box;
+  }
+  
+  #kitchens h2 {
+    text-align: center;
+    font-size: 34px;
+    color: #77472b;
+    margin-bottom: 64px;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    box-shadow: 20px 10px 30px #6f3f21;
+    padding: 6px 0px;
+    border-radius: 2px;
+  }
+  
+  .pictures-kitchen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 80px;
+    flex-basis: 1 0 auto;
+    align-content: flex-start;
+  }
+  
+  .picture-kitchen {
+    border: 2px solid #6f3f21;
+    margin: auto;
+    padding: 4px;
+    border-radius: 2px;
+    box-shadow: 20px 30px 40px#6f3f21;
+  }
+  
+  .picture-kitchen img {
+    width: 34vw;
+    height: 44vh;
+    transform: scale(1);
+    transition: transform 300ms ease-in-out;
+    border: 1px solid #93582c;
+    border-radius: 2px;
+  }
+  
+  .picture-kitchen img:hover {
+    transform: scale(1.3);
+  }

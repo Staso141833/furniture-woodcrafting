@@ -37,7 +37,7 @@ colors {
   height: 100%;
   width: 100%;
   z-index: 0;
-  opacity: calc(0.7);
+  opacity: calc(0.5);
 }
 
 .add-form-conainter-img img {
