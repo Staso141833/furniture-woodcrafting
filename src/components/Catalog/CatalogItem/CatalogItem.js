@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../catalog.css";
 
 export const CatalogItem = ({ 
+  _id,
   kind,
   price,
   imageUrl }) => {
@@ -15,10 +16,9 @@ export const CatalogItem = ({
         <strong>Price:</strong>
         <span className="price">{price}</span>$
       </p>
-      <button className="details-btn">
-        <Link to="/details" className="details-anchor"></Link>Details
-      </button>
-
+      {/* <button className="details-btn"Link to={`/catalog/${_id}`}>Details</button> */}
+      <Link to={`/catalog/${_id}`} className="details-btn">Details</Link>
+      {/* < className="details-anchor"> */}
       </div>
     
     </div>

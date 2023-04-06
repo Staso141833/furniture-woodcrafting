@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import * as furnitureService from "./services/furnitureService.js";
+import { AuthContext } from "./contexts/AuthContext.js";
+import { useForm } from "./hooks/useForm.js";
+import * as authService from "./services/authService.js";
 
 import { Home } from './components/Home/Home.js';
 import { Login } from './components/Login/Login.js';
@@ -23,18 +26,19 @@ function App() {
 
   const navigate = useNavigate();
   const [furnitures, setFurnitures] = useState([]);
+  const [auth, setAuth] = useState({});
 
   useEffect(() => {
     furnitureService.getAll()
       .then(result => {
-        console.log(result)
+  
         setFurnitures(result)
       });
   
   }, []);
 
   const onCreateFurnitureSubmit = async (data) => {
-      console.log(data);
+
   const newFurniture = await furnitureService.create(data);
 
     setFurnitures(state => [...state, newFurniture])
@@ -42,15 +46,28 @@ function App() {
 
   }
 
-  return (
+  const onLoginSubmit = async (data) => {
 
+    try {
+      const result = await authService.login(data);
+      setAuth(result);
+      
+      navigate('/catalog');
+    } catch(error){
+      console.log('There is a problem!');
+    }
+
+  };
+
+  return (
+    <AuthContext.Provider value={{onLoginSubmit}}>
     <div id="box">
   <Navigation/>
 
   <main id="main-content">
     <Routes>
       <Route path='/' element={<Home/>}/>;
-      <Route path='/login' element={<Login/>}/>;
+      <Route path='/login' element={<Login/> }/>;
       <Route path='/register' element={<Register/>}/>;
       <Route path='/add-furniture' element={<Add onCreateFurnitureSubmit={onCreateFurnitureSubmit}/>}/>;
       <Route path='/catalog' element={<Catalog furnitures={furnitures}/>}/>;
@@ -65,6 +82,9 @@ function App() {
     </main>
     <Footer/> 
     </div>
+      
+    </AuthContext.Provider>
+
    
   );
 }

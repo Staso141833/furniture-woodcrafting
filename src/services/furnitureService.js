@@ -11,6 +11,12 @@ export const getAll = async () => {
     
 }
 
+export const getOne = async (furnitureId) => {
+    const result = await request.get(`${baseUrl}/${furnitureId}`);
+    console.log(`${result}`)
+    return result;
+}
+
 export const create = async (furnitureData) => {
     const result = await request.post(baseUrl, furnitureData);
 
