@@ -1,9 +1,13 @@
 import "./navigation.css"
 import { Link } from "react-router-dom";
-// import "https://use.fontawesome.com/releases/v5.10.2/css/all.css"
 
+import { AuthContext } from "../../contexts/AuthContext.js";
+import { useContext } from "react";
 
 export const Navigation = () => {
+    const { isAuthenticated, userEmail } = useContext(AuthContext);
+    console.log(isAuthenticated)
+
     return (
         <>
         <header className="header">
@@ -33,12 +37,26 @@ export const Navigation = () => {
           <nav>
         
             <ul className="nav-ul">
-              <li className="nav-items"><Link to="/">Home</Link></li>
-              <li className="nav-items"><Link to="/login">Login</Link></li>
-              <li className="nav-items"><Link to="/register">Register</Link></li>
-              <li className="nav-items"><Link to="/add-furniture">Create product</Link></li>
-              <li className="nav-items"><Link to="/details/:furnitureId">Details</Link></li>
-              <li className="nav-items"><Link to="/edit">Edit</Link></li>
+
+              {isAuthenticated && (
+
+              <>
+              <li className="nav-items"> <p className="userEmail">your email: <span>{userEmail}</span></p></li>
+                <li className="nav-items"><Link to="/add-furniture">Create product</Link></li>
+                <li className="nav-items"><Link to="/logout">Logout</Link></li>
+                <li className="nav-items"><Link to="/">Home</Link></li>
+               
+                </>
+              )}
+
+              {!isAuthenticated && (
+                <>
+                <li className="nav-items"><Link to="/login">Login</Link></li>
+                <li className="nav-items"><Link to="/register">Register</Link></li>
+                </>
+              )}
+
+              
               <li className="nav-items-dropbtn">   <div className="dropdown">
                 <button className="dropbtn">Products</button>
                 <div className="dropdown-content">

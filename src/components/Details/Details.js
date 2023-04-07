@@ -1,21 +1,35 @@
 import "./details.css";
 
-import { useParams } from "react-router-dom";
-import * as furnitureService from '../../services/furnitureService.js';
-import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { furnitureServiceFactory } from '../../services/furnitureService.js';
+import { useEffect, useState, useContext } from "react";
+import { useService } from "../../hooks/userService.js";
+import { AuthContext } from "../../contexts/AuthContext.js";
+
 
 
 export const Details = () => {
 
+  const { userId } = useContext(AuthContext);
   const { furnitureId } = useParams();
   const [furniture, setFurniture] = useState({});
+  const {furnitureService} =  useService(furnitureServiceFactory);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    furnitureService.getOne()
+    furnitureService.getOne(furnitureId)
       .then(result => {
         setFurniture(result)})
   }, [furnitureId])
 
+  const isOwner = furniture._ownerId === userId;
+
+  const onDeleteClick = async () => {
+   await furnitureService.delete(furniture._id);
+    navigate('/catalog')
+
+  }
+    
   return (
     <section id="details">
       <div className="details-wrapper">
@@ -41,12 +55,14 @@ export const Details = () => {
           Comments: <span className="comments">0</span> times.
         </h4>
 
-        <div className="action-buttons">
-          <button className="edit-btn">Edit</button>
-          <button className="delete-btn">Delete</button>
-
-          <button className="comment-btn">Comment</button>
-        </div>
+        {isOwner && (
+          <div className="action-buttons">
+            <button className="edit-btn">Edit</button>
+            <button className="delete-btn"onClick={onDeleteClick}>Delete</button>
+            <button className="comment-btn">Comment</button>
+          </div>
+        )}
+     
       </div>
     </section>
   );

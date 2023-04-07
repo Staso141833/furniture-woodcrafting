@@ -152,3 +152,9 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.userEmail {
+  font-size: 18px;
+  color: #77472b;
+  
+}

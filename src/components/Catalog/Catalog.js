@@ -9,10 +9,7 @@ export const Catalog = ({
       <h2>Furnitures</h2>
 
       <div className="furnitures-class">
-        {furnitures.map((furniture) => (
-          <CatalogItem key={furniture._id} {...furniture} />
-        ))}
-        ;
+        {furnitures.map((furniture) => (<CatalogItem key={furniture._id} {...furniture} />))};
         {furnitures.length === 0 && (
           <h3 className="no-furnitures">No furnitures yet</h3>
         )}

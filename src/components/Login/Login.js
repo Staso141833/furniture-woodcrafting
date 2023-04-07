@@ -1,5 +1,6 @@
 import "./login.css";
 
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext.js";
 import { useContext } from "react";
 import { useForm } from "../../hooks/useForm.js";
@@ -15,7 +16,7 @@ export const Login = () => {
   const {values, changeHandler, onSubmit} = useForm({
     [LoginFormKeys.Email]: '',
     [LoginFormKeys.Password]: '',
-  },onLoginSubmit)
+  }, onLoginSubmit)
 
 
 
@@ -50,7 +51,7 @@ export const Login = () => {
             <div className="have-not-registered">
               <p className="message">You haven't registered yet? </p>
               <i className="fas fa-angle-double-down"></i>
-              <a href="/register">Register</a>
+              <Link to="/register">Register</Link>
             </div>
           </form>
 

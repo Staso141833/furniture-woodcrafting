@@ -6,6 +6,8 @@ export const CatalogItem = ({
   kind,
   price,
   imageUrl }) => {
+
+    console.log(`${_id}`)
   return (
     <div className="furniture">
       <img className="image" src={imageUrl} alt={imageUrl} />
@@ -16,9 +18,7 @@ export const CatalogItem = ({
         <strong>Price:</strong>
         <span className="price">{price}</span>$
       </p>
-      {/* <button className="details-btn"Link to={`/catalog/${_id}`}>Details</button> */}
       <Link to={`/catalog/${_id}`} className="details-btn">Details</Link>
-      {/* < className="details-anchor"> */}
       </div>
     
     </div>

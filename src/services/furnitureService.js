@@ -1,24 +1,35 @@
-import * as request  from "./requester.js";
+import { requestFactory } from "./requester.js";
 
+const baseUrl = "http://localhost:3030/data/furnitures";
 
-const baseUrl = 'http://localhost:3030/jsonstore/furnitures'
-
-export const getAll = async () => {
-    const result = await request.get(baseUrl)
+export const furnitureServiceFactory = (token) => {
+    const request = requestFactory(token);
+    
+    const getAll = async () => {
+    const result = await request.get(baseUrl);
     const furnitures = Object.values(result);
 
     return furnitures;
-    
-}
+  };
 
-export const getOne = async (furnitureId) => {
+  const getOne = async (furnitureId) => {
     const result = await request.get(`${baseUrl}/${furnitureId}`);
-    console.log(`${result}`)
+  
     return result;
-}
+  };
 
-export const create = async (furnitureData) => {
+  const create = async (furnitureData) => {
     const result = await request.post(baseUrl, furnitureData);
 
     return result;
-}
+  };
+
+  const deleteFurniture = (furnitureId) => request.delete(`${baseUrl}/${furnitureId}`);
+
+  return {
+    getAll,
+    getOne,
+    create,
+    delete: deleteFurniture,
+  };
+};

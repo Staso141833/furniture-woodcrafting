@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
-import * as furnitureService from "./services/furnitureService.js";
+import { furnitureServiceFactory} from "./services/furnitureService";
+import {authServiceFactory} from "./services/authService.js";
 import { AuthContext } from "./contexts/AuthContext.js";
-import { useForm } from "./hooks/useForm.js";
-import * as authService from "./services/authService.js";
+import { useService } from "./hooks/userService.js";
+
 
 import { Home } from './components/Home/Home.js';
 import { Login } from './components/Login/Login.js';
@@ -12,12 +13,13 @@ import { Navigation } from './components/Navigation/Navigation.js';
 import { Register } from "./components/Register/Register.js";
 import { Add } from "./components/Add/Add.js";
 import { Footer } from "./components/Footer/Footer.js";
-import { Edit } from "./components/Edit/Edit.js";
 import { Kitchens } from "./components/Kitchens/Kitchens.js";
 import { Woodcarvs } from "./components/Woodcarvs/Woodcarvs.js";
-import { Details } from "./components/Details/Details.js";
 import { Bedrooms } from "./components/Bedrooms/Bedrooms.js";
 import { Catalog } from "./components/Catalog/Catalog.js";
+import { Logout } from "./components/Logout/Logout.js";
+import { Details } from "./components/Details/Details.js";
+
 
 
 
@@ -27,6 +29,9 @@ function App() {
   const navigate = useNavigate();
   const [furnitures, setFurnitures] = useState([]);
   const [auth, setAuth] = useState({});
+  const furnitureService = furnitureServiceFactory(auth.accessToken);
+  const authService = authServiceFactory(auth.accessToken);
+
 
   useEffect(() => {
     furnitureService.getAll()
@@ -59,8 +64,42 @@ function App() {
 
   };
 
+  const onRegisterSubmit = async (values) => {
+
+    const { rePassword, ...registerData } = values;
+      if (rePassword !== registerData.password) {
+        throw Error('Passwords do not match!');
+      }
+
+    try {
+      const result = await authService.register(registerData);
+
+      setAuth(result);
+      navigate('/catalog');
+
+    } catch(error){
+        console.log('There is a problem!')
+    }
+  }
+
+  const onLogout = async () => {
+    await authService.logout();
+    setAuth({});
+  }
+
+  const contextValues = {
+    onLoginSubmit,
+    onRegisterSubmit,
+    onLogout,
+    userId: auth._id,
+    token: auth.accessToken,
+    userEmail: auth.email,
+    isAuthenticated: !!auth.accessToken,
+    
+  }
+
   return (
-    <AuthContext.Provider value={{onLoginSubmit}}>
+    <AuthContext.Provider value={contextValues}>
     <div id="box">
   <Navigation/>
 
@@ -68,15 +107,15 @@ function App() {
     <Routes>
       <Route path='/' element={<Home/>}/>;
       <Route path='/login' element={<Login/> }/>;
+      <Route path='logout' element={<Logout/>}/>;
       <Route path='/register' element={<Register/>}/>;
       <Route path='/add-furniture' element={<Add onCreateFurnitureSubmit={onCreateFurnitureSubmit}/>}/>;
       <Route path='/catalog' element={<Catalog furnitures={furnitures}/>}/>;
-      <Route path='catalog/:furnitureId' element={<Details/>}/>
-      <Route path='/edit' element={<Edit/>}/>; 
+      <Route path='/catalog/:furnitureId' element={<Details/>}/>
       <Route path='/kitchens' element={<Kitchens/>}/>;
       <Route path='/woodcarvs' element={<Woodcarvs/>}/>;
-      <Route path='/details' element={<Details/>}/>;
       <Route path='/bedrooms' element={<Bedrooms/>}/>;
+      
     </Routes>
 
     </main>
