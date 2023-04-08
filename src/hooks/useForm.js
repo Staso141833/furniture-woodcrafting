@@ -1,6 +1,6 @@
  import { useState } from 'react';
 
- export const useForm = (initialValues, onLoginSubmitHandler) => {
+ export const useForm = (initialValues, onSubmitHandler) => {
 
     const [values, setValues] = useState(initialValues);
 
@@ -11,8 +11,10 @@
 
     const onSubmit = (e) => {
         e.preventDefault();
-        onLoginSubmitHandler(values);
-        console.log(values)
+      
+        onSubmitHandler(values);
+        
+        setValues(initialValues);
     }
 
     const changeValues = (newValues) => {

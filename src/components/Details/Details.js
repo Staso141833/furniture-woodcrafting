@@ -3,27 +3,56 @@ import "./details.css";
 import { Link } from "react-router-dom";
 
 import { useParams, useNavigate } from "react-router-dom";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useReducer } from "react";
+import * as commentService from "../../services/commentService.js";
+
 import { useService } from "../../hooks/userService.js";
-import { AuthContext } from "../../contexts/AuthContext.js";
+import { useAuthContext } from "../../contexts/AuthContext.js";
 import { furnitureServiceFactory } from "../../services/furnitureService.js";
+import { furnitureReducer } from "../../reducers/funritureReducer.js";
+import { AddComment } from "./AddComment.js";
+
+
 
 export const Details = () => {
 
-  const { userId } = useContext(AuthContext);
+  const { userId, isAuthenticated, userEmail } = useAuthContext();
   const { furnitureId } = useParams();
-  const [furniture, setFurniture] = useState({});
+  const [furniture, dispatch] = useReducer(furnitureReducer, {})
   const furnitureService =  useService(furnitureServiceFactory);
+
+
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    furnitureService.getOne(furnitureId)
-        .then(result => {
-            setFurniture(result);
-        })
+    Promise.all([
+      furnitureService.getOne(furnitureId),
+      commentService.getAll(furnitureId),
+    ])
+      .then(([furnitureData, comments]) => {
+
+        const furnitureState = {
+          ...furnitureData,
+          comments,
+        }
+        dispatch({type: 'FURNITURE_FETCH', payload: furnitureState})
+
+        });
 }, [furnitureId]);
 
   const isOwner = furniture._ownerId === userId;
+
+  const onCommentSubmit = async (values) => {
+  const response = await commentService.create(furnitureId, values.comment);
+
+  dispatch({
+    type: 'COMMENT_ADD',
+    payload: response,
+    userEmail,
+    });
+
+};
 
   const onDeleteClick = async () => {
    await furnitureService.delete(furniture._id);
@@ -53,15 +82,32 @@ export const Details = () => {
         <p className="details-width-height">Width: {furniture.width}mm x Height: {furniture.height}mm</p>
 
         <h4 className="details-comments">
-          Bought: <span className="comments">0</span> times.
+          Comments: <span className="comments">0</span> times.
         </h4>
+
+        <div className="details-comments-container">
+                    <h2>Comments:</h2>
+                    <ul>
+                        {furniture.comments && furniture.comments.map(x => (
+                            <li key={x._id} className="comment">
+                                <p>{x.author.email}:{x.comment}</p>
+                            </li>
+                        ))}
+                    </ul>
+                          {!furniture.comments?.length && (
+                            <p className="no-comments">No comments</p>
+                          )}
+
+        </div>
+
+
         <Link to={'/catalog'} className="back-btn">Back</Link>
         {isOwner && (
           <div className="action-buttons">
             <Link to={`$catalog/${furniture._id}`} className="edit-btn">Edit</Link>
             
             <button className="delete-btn"onClick={onDeleteClick}>Delete</button>
-            <button className="comment-btn">Buy</button>
+              {isAuthenticated && <AddComment onCommentSubmit={onCommentSubmit}/>}
           </div>
         )}
      

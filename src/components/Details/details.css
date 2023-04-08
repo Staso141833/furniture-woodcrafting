@@ -10,7 +10,7 @@ colors {
 #details {
     position: relative;
     width: 70vw;
-    height: 90vh;
+    height: 100vh;
     top: 25%;
     left: 20%;
     transform: translate(-10%, 0%);
@@ -59,6 +59,24 @@ colors {
     transition: transform 300ms ease-in-out;
   }
 
+  .details-comments-container {
+    font-size: 20px;
+    color: #77472b;
+    width: 60%;
+    height: 60%;
+  }
+
+  .details-comments-container ul {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    height: 30%;
+  }
+
+  .details-comments-container ul li {
+    font-size: 20px;
+  }
 
   
   .details-wrapper img:hover {
@@ -125,7 +143,8 @@ colors {
   }
 
   .edit-btn,
-  .back-btn {
+  .back-btn,
+  .comment-btn {
     text-decoration: none;
     margin: auto 50px;
     font-size: 21px;
@@ -143,4 +162,11 @@ colors {
     background: #ffcf91;
     color: #6f3f21;
     border: 4px outset #6f3f21;
+  }
+
+  .comment-furniture {
+    font-size: 20px;
+    display: flex;
+    width: 60%;
+    height: 60%;
   }

@@ -19,38 +19,14 @@ import { Catalog } from "./components/Catalog/Catalog.js";
 import { Logout } from "./components/Logout/Logout.js";
 import { Details } from "./components/Details/Details.js";
 import { Edit } from "./components/Edit/Edit.js";
+import { FurnitureProvider } from "./contexts/FurnitureContext.js";
 
 function App() {
-  const navigate = useNavigate();
-  const [furnitures, setFurnitures] = useState([]);
-  const furnitureService = furnitureServiceFactory(); //auth.accessToken
 
-  useEffect(() => {
-    furnitureService.getAll().then((result) => {
-      setFurnitures(result);
-    });
-  }, []);
-
-  const onCreateFurnitureSubmit = async (data) => {
-    const newFurniture = await furnitureService.create(data);
-
-    setFurnitures((state) => [...state, newFurniture]);
-    navigate("/catalog");
-  };
-
-  const onFurnitureEditSubmit = async (values) => {
-    const result = await furnitureService.edit(values._id, values);
-
-    setFurnitures((state) =>
-      state.map((oldFurniture) =>
-        oldFurniture._id === values._id ? result : oldFurniture
-      )
-    );
-    navigate(`/catalog/${values._id}`);
-  };
 
   return (
     <AuthProvider>
+      <FurnitureProvider>
       <div id="box">
         <Navigation />
 
@@ -60,23 +36,10 @@ function App() {
             <Route path="/login" element={<Login />} />;
             <Route path="logout" element={<Logout />} />;
             <Route path="/register" element={<Register />} />;
-            <Route
-              path="/add-furniture"
-              element={
-                <Add onCreateFurnitureSubmit={onCreateFurnitureSubmit} />
-              }
-            />
-            ;
-            <Route
-              path="/catalog"
-              element={<Catalog furnitures={furnitures} />}
-            />
-            ;
+            <Route path="/add-furniture" element={<Add />}/>;
+            <Route path="/catalog" element={<Catalog/>}/>;
             <Route path="/catalog/:furnitureId" element={<Details />} />
-            <Route
-              path="/catalog/:furnitureId/edit"
-              element={<Edit onFurnitureEditSubmit={onFurnitureEditSubmit} />}
-            />
+            <Route path="/catalog/:furnitureId/edit" element={<Edit />}/>
             <Route path="/kitchens" element={<Kitchens />} />;
             <Route path="/woodcarvs" element={<Woodcarvs />} />;
             <Route path="/bedrooms" element={<Bedrooms />} />;
@@ -84,6 +47,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      </FurnitureProvider>
     </AuthProvider>
   );
 }

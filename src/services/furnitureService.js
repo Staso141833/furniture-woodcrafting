@@ -15,13 +15,13 @@ export const furnitureServiceFactory = (token) => {
   const getOne = async (furnitureId) => {
     const result = await request.get(`${baseUrl}/${furnitureId}`);
     
-    console.log(result)
+
     return result;
   };
 
   const create = async (furnitureData) => {
     const result = await request.post(baseUrl, furnitureData);
-    console.log(result)
+
     return result;
   };
 

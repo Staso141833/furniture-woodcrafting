@@ -4,10 +4,9 @@ import { useForm } from "../../hooks/useForm.js";
 
 
 
-export const Add = ({
-  onCreateFurnitureSubmit,
-}) => {
+export const Add = () => {
 
+  const {onCreateFurnitureSubmit} = useFurnitureContext()
   const {values, changeHandler, onSubmit} = useForm({
     kind: "",
     wood: "",
