@@ -15,7 +15,7 @@ export const Details = () => {
   const { userId } = useContext(AuthContext);
   const { furnitureId } = useParams();
   const [furniture, setFurniture] = useState({});
-  const {furnitureService} =  useService(furnitureServiceFactory);
+  const furnitureService =  useService(furnitureServiceFactory);
   const navigate = useNavigate();
 
   useEffect(() => {

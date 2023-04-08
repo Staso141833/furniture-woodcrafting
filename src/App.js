@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { furnitureServiceFactory} from "./services/furnitureService";
-import {authServiceFactory} from "./services/authService.js";
-import { AuthContext } from "./contexts/AuthContext.js";
+
+import { AuthProvider } from "./contexts/AuthContext.js";
 import { useService } from "./hooks/userService.js";
 
 
@@ -29,10 +29,7 @@ function App() {
 
   const navigate = useNavigate();
   const [furnitures, setFurnitures] = useState([]);
-  const [auth, setAuth] = useState({});
-  const furnitureService = furnitureServiceFactory(auth.accessToken);
-  const authService = authServiceFactory(auth.accessToken);
-
+  const furnitureService = furnitureServiceFactory(); //auth.accessToken
 
   useEffect(() => {
     furnitureService.getAll()
@@ -52,41 +49,11 @@ function App() {
 
   }
 
-  const onLoginSubmit = async (data) => {
 
-    try {
-      const result = await authService.login(data);
-      setAuth(result);
-      
-      navigate('/catalog');
-    } catch(error){
-      console.log('There is a problem!');
-    }
 
-  };
 
-  const onRegisterSubmit = async (values) => {
 
-    const { rePassword, ...registerData } = values;
-      if (rePassword !== registerData.password) {
-        throw Error('Passwords do not match!');
-      }
-
-    try {
-      const result = await authService.register(registerData);
-
-      setAuth(result);
-      navigate('/catalog');
-
-    } catch(error){
-        console.log('There is a problem!')
-    }
-  }
-
-  const onLogout = async () => {
-    await authService.logout();
-    setAuth({});
-  }
+ 
 
   const onFurnitureEditSubmit = async (values) => {
     const result = await furnitureService.edit(values._id, values);
@@ -95,19 +62,9 @@ function App() {
     navigate(`/catalog/${values._id}`);
   }
 
-  const contextValues = {
-    onLoginSubmit,
-    onRegisterSubmit,
-    onLogout,
-    userId: auth._id,
-    token: auth.accessToken,
-    userEmail: auth.email,
-    isAuthenticated: !!auth.accessToken,
-    
-  }
 
   return (
-    <AuthContext.Provider value={contextValues}>
+    <AuthProvider>
     <div id="box">
   <Navigation/>
 
@@ -119,9 +76,8 @@ function App() {
       <Route path='/register' element={<Register/>}/>;
       <Route path='/add-furniture' element={<Add onCreateFurnitureSubmit={onCreateFurnitureSubmit}/>}/>;
       <Route path='/catalog' element={<Catalog furnitures={furnitures}/>}/>;
-      {/* <Route path='/catalog/:furnitureId' element={<Details/>}/> */}
-      <Route path='/catalog/:furnitureId' element={<Edit onFurnitureEditSubmit={onFurnitureEditSubmit}/>}/>
-      {/* <Route path='/catalog/:furnitureId/edit' element={<Edit/>}/> */}
+      <Route path='/catalog/:furnitureId' element={<Details/>}/> 
+      <Route path='/catalog/:furnitureId/edit' element={<Edit onFurnitureEditSubmit={onFurnitureEditSubmit}/>}/>
       <Route path='/kitchens' element={<Kitchens/>}/>;
       <Route path='/woodcarvs' element={<Woodcarvs/>}/>;
       <Route path='/bedrooms' element={<Bedrooms/>}/>;
@@ -132,7 +88,7 @@ function App() {
     <Footer/> 
     </div>
       
-    </AuthContext.Provider>
+    </AuthProvider>
 
    
   );
