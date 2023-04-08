@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { authServiceFactory } from '../services/authService.js'
+import { useLocaleStorage } from "../hooks/useLocalStorage.js";
 
 
 
@@ -14,7 +15,7 @@ export const AuthProvider = ({
 
     const navigate = useNavigate();
 
-    const [auth, setAuth] = useState({});
+    const [auth, setAuth] = useLocaleStorage('auth', {});
     const authService = authServiceFactory(auth.accessToken);
 
     const onLoginSubmit = async (data) => {

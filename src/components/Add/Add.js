@@ -88,7 +88,7 @@ export const Add = ({
             onChange={changeHandler}
             />
 
-            <button className="btn-add" type="submit" onSubmit={onSubmit}>Add Furniture</button>
+            <button className="btn-add" type="submit">Add Furniture</button>
 
             <button className="btn-cancel" type="submit">Cancel</button>
        

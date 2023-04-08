@@ -8,8 +8,6 @@ import { useService } from "../../hooks/userService.js";
 import { AuthContext } from "../../contexts/AuthContext.js";
 import { furnitureServiceFactory } from "../../services/furnitureService.js";
 
-
-
 export const Details = () => {
 
   const { userId } = useContext(AuthContext);
@@ -55,14 +53,15 @@ export const Details = () => {
         <p className="details-width-height">Width: {furniture.width}mm x Height: {furniture.height}mm</p>
 
         <h4 className="details-comments">
-          Comments: <span className="comments">0</span> times.
+          Bought: <span className="comments">0</span> times.
         </h4>
-
+        <Link to={'/catalog'} className="back-btn">Back</Link>
         {isOwner && (
           <div className="action-buttons">
             <Link to={`$catalog/${furniture._id}`} className="edit-btn">Edit</Link>
+            
             <button className="delete-btn"onClick={onDeleteClick}>Delete</button>
-            <button className="comment-btn">Comment</button>
+            <button className="comment-btn">Buy</button>
           </div>
         )}
      

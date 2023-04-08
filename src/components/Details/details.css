@@ -123,3 +123,24 @@ colors {
     background: #6f3f21;
     color: #ffcf91;
   }
+
+  .edit-btn,
+  .back-btn {
+    text-decoration: none;
+    margin: auto 50px;
+    font-size: 21px;
+    width: 130px;
+    padding: 10px;
+    background: #6f3f21;
+    border-radius: 4px;
+    color: #ffcf91;
+    transition: all 450ms;
+    border: 4px inset #ffcf91;
+    text-align: center;
+  }
+
+  .edit-btn:hover {
+    background: #ffcf91;
+    color: #6f3f21;
+    border: 4px outset #6f3f21;
+  }

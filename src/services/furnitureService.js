@@ -21,9 +21,10 @@ export const furnitureServiceFactory = (token) => {
 
   const create = async (furnitureData) => {
     const result = await request.post(baseUrl, furnitureData);
-
+    console.log(result)
     return result;
   };
+
 
   const edit = (furnitureId, data) => {
    return request.put(`${baseUrl}/${furnitureId}`, data);

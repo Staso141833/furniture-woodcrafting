@@ -12,6 +12,7 @@
     const onSubmit = (e) => {
         e.preventDefault();
         onLoginSubmitHandler(values);
+        console.log(values)
     }
 
     const changeValues = (newValues) => {
