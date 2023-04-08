@@ -1,6 +1,6 @@
 import { requestFactory } from "./requester.js";
 
-const baseUrl = "http://localhost:3030/data/furnitures";
+const baseUrl = 'http://localhost:3030/data/furnitures';
 
 export const furnitureServiceFactory = (token) => {
     const request = requestFactory(token);
@@ -24,12 +24,17 @@ export const furnitureServiceFactory = (token) => {
     return result;
   };
 
+  const edit = (furnitureId, data) => {
+   return request.put(`${baseUrl}/${furnitureId}`, data);
+  }
+
   const deleteFurniture = (furnitureId) => request.delete(`${baseUrl}/${furnitureId}`);
 
   return {
     getAll,
     getOne,
     create,
+    edit,
     delete: deleteFurniture,
   };
 };

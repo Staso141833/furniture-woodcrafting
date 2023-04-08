@@ -6,7 +6,6 @@ import { useContext } from "react";
 
 export const Navigation = () => {
     const { isAuthenticated, userEmail } = useContext(AuthContext);
-    console.log(isAuthenticated)
 
     return (
         <>
@@ -35,8 +34,18 @@ export const Navigation = () => {
 
         <div>
           <nav>
-        
+       
             <ul className="nav-ul">
+            <li className="nav-items"><Link to="/">Home</Link></li>
+            <li className="nav-items-dropbtn">   <div className="dropdown">
+                <button className="dropbtn">Products</button>
+                <div className="dropdown-content">
+                  <Link to="/kitchens">Kitchens</Link>
+                  <Link to="/bedrooms">Bedrooms</Link>
+                  <Link to="/woodcarvs">Woodcarvs</Link>
+                  <Link to="/catalog">Catalog</Link>
+                </div>
+              </div></li>
 
               {isAuthenticated && (
 
@@ -44,7 +53,7 @@ export const Navigation = () => {
               <li className="nav-items"> <p className="userEmail">your email: <span>{userEmail}</span></p></li>
                 <li className="nav-items"><Link to="/add-furniture">Create product</Link></li>
                 <li className="nav-items"><Link to="/logout">Logout</Link></li>
-                <li className="nav-items"><Link to="/">Home</Link></li>
+             
                
                 </>
               )}
@@ -57,15 +66,7 @@ export const Navigation = () => {
               )}
 
               
-              <li className="nav-items-dropbtn">   <div className="dropdown">
-                <button className="dropbtn">Products</button>
-                <div className="dropdown-content">
-                  <Link to="/kitchens">Kitchens</Link>
-                  <Link to="/bedrooms">Bedrooms</Link>
-                  <Link to="/woodcarvs">Woodcarvs</Link>
-                  <Link to="/catalog">Catalog</Link>
-                </div>
-              </div></li>
+           
 
 
             </ul>

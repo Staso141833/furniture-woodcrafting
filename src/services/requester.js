@@ -6,7 +6,7 @@ const request = async (method, token, url, data) => {
 
     if (data) {
       options.headers = {
-        "content-type": "application/json",
+        'content-type': 'application/json',
       };
       options.body = JSON.stringify(data);
     }
@@ -16,8 +16,8 @@ const request = async (method, token, url, data) => {
     options.headers = {
       ...options.headers,
       'X-Authorization': token,
-    }
-  }
+    };
+  };
 
   const response = await fetch(url, options);
 
@@ -35,15 +35,12 @@ const request = async (method, token, url, data) => {
 
 };
 
-// PARTIAL APPLICATION
- 
-
 export const requestFactory = (token) => {
   return {
-  get : request.bind(null, "GET", token),
-  put : request.bind(null, "PUT", token),
-  post : request.bind(null, "POST", token),
-  patch : request.bind(null, "PATCH", token),
-  delete : request.bind(null, "DELETE", token),
+  get : request.bind(null, 'GET', token),
+  put : request.bind(null, 'PUT', token),
+  post : request.bind(null, 'POST', token),
+  patch : request.bind(null, 'PATCH', token),
+  delete : request.bind(null, 'DELETE', token),
   }
 }

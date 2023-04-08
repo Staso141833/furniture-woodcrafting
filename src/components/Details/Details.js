@@ -1,10 +1,12 @@
 import "./details.css";
 
+import { Link } from "react-router-dom";
+
 import { useParams, useNavigate } from "react-router-dom";
-import { furnitureServiceFactory } from '../../services/furnitureService.js';
 import { useEffect, useState, useContext } from "react";
 import { useService } from "../../hooks/userService.js";
 import { AuthContext } from "../../contexts/AuthContext.js";
+import { furnitureServiceFactory } from "../../services/furnitureService.js";
 
 
 
@@ -18,15 +20,16 @@ export const Details = () => {
 
   useEffect(() => {
     furnitureService.getOne(furnitureId)
-      .then(result => {
-        setFurniture(result)})
-  }, [furnitureId])
+        .then(result => {
+            setFurniture(result);
+        })
+}, [furnitureId]);
 
   const isOwner = furniture._ownerId === userId;
 
   const onDeleteClick = async () => {
    await furnitureService.delete(furniture._id);
-    navigate('/catalog')
+    navigate('/catalog');
 
   }
     
@@ -57,7 +60,7 @@ export const Details = () => {
 
         {isOwner && (
           <div className="action-buttons">
-            <button className="edit-btn">Edit</button>
+            <Link to={`$catalog/${furniture._id}`} className="edit-btn">Edit</Link>
             <button className="delete-btn"onClick={onDeleteClick}>Delete</button>
             <button className="comment-btn">Comment</button>
           </div>

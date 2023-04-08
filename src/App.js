@@ -19,6 +19,7 @@ import { Bedrooms } from "./components/Bedrooms/Bedrooms.js";
 import { Catalog } from "./components/Catalog/Catalog.js";
 import { Logout } from "./components/Logout/Logout.js";
 import { Details } from "./components/Details/Details.js";
+import { Edit } from "./components/Edit/Edit.js";
 
 
 
@@ -87,6 +88,13 @@ function App() {
     setAuth({});
   }
 
+  const onFurnitureEditSubmit = async (values) => {
+    const result = await furnitureService.edit(values._id, values);
+
+      setFurnitures(state => state.map(oldFurniture => oldFurniture._id === values._id ? result : oldFurniture));
+    navigate(`/catalog/${values._id}`);
+  }
+
   const contextValues = {
     onLoginSubmit,
     onRegisterSubmit,
@@ -111,7 +119,9 @@ function App() {
       <Route path='/register' element={<Register/>}/>;
       <Route path='/add-furniture' element={<Add onCreateFurnitureSubmit={onCreateFurnitureSubmit}/>}/>;
       <Route path='/catalog' element={<Catalog furnitures={furnitures}/>}/>;
-      <Route path='/catalog/:furnitureId' element={<Details/>}/>
+      {/* <Route path='/catalog/:furnitureId' element={<Details/>}/> */}
+      <Route path='/catalog/:furnitureId' element={<Edit onFurnitureEditSubmit={onFurnitureEditSubmit}/>}/>
+      {/* <Route path='/catalog/:furnitureId/edit' element={<Edit/>}/> */}
       <Route path='/kitchens' element={<Kitchens/>}/>;
       <Route path='/woodcarvs' element={<Woodcarvs/>}/>;
       <Route path='/bedrooms' element={<Bedrooms/>}/>;

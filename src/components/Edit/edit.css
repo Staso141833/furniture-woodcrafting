@@ -22,7 +22,7 @@ colors {
   }
   
   .form-edit {
-     background-image: url("./brownTableNew.jpg"); 
+     /* background-image: url("./brownTableNew.jpg");  */
     /* background-color: #ffcf91; */
     background-position: center;
     background-size: cover;

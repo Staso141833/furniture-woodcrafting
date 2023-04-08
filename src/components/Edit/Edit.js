@@ -1,12 +1,45 @@
 import "./edit.css";
 
-export const Edit = () => {
+import { Link } from "react-router-dom";
+
+import { useEffect } from "react";
+import { useForm } from "../../hooks/useForm.js";
+import { useParams } from "react-router-dom";
+
+import { useService } from "../../hooks/userService.js";
+import { furnitureServiceFactory } from "../../services/furnitureService.js";
+
+export const Edit = ({
+  onFurnitureEditSubmit,
+  
+
+}) => {
+  
+  const { furnitureId } = useParams();
+  const furnitureService = useService(furnitureServiceFactory);
+  const { values, changeHandler, onSubmit, changeValues } = useForm({
+    _id: '',
+    kind: '',
+    wood: '',
+    width: '',
+    height: '',
+    price: '',
+    imageUrl: '',
+  }, onFurnitureEditSubmit);
+
+  useEffect(() => {
+    furnitureService.getOne(furnitureId)
+      .then(result => {
+        changeValues(result);
+      });
+  }, [furnitureId]);
+
     return (
     <section id="edit">
         <div className="edit-form-conainter">
         
       
-          <form className="form-edit">
+          <form className="form-edit" method="POST" onSubmit={onSubmit}>
       
              <div className="edit-furniture">
               <h2>Edit furniture</h2>
@@ -18,6 +51,8 @@ export const Edit = () => {
               name="kind"
               id="kind-of-furniture"
               placeholder="kind of furniture"
+            value={values.kind}
+            onChange={changeHandler}
             />
 
             <input
@@ -25,6 +60,8 @@ export const Edit = () => {
               name="wood-type"
               id="type-of-wood"
               placeholder="type of wood"
+            value={values.wood}
+            onChange={changeHandler}
             />
 
             <input
@@ -32,6 +69,8 @@ export const Edit = () => {
               name="width"
               id="width"
               placeholder="width in mm"
+            value={values.width}
+            onChange={changeHandler}
             />
             
             <input
@@ -39,13 +78,17 @@ export const Edit = () => {
             name="height"
             id="height"
             placeholder="height in mm"
+            value={values.height}
+            onChange={changeHandler}
             />
 
             <input
             type="text"
-            name="currency"
-            id="currency"
+            name="price"
+            id="price"
             placeholder="EUR"
+            value={values.price}
+            onChange={changeHandler}
             />
 
             <input
@@ -53,11 +96,13 @@ export const Edit = () => {
             name="imageUrl"
             id="imageUrl"
             placeholder="image url"
+            value={values.imageUrl}
+            onChange={changeHandler}
             />
 
             <button className="btn-edit" type="submit">Edit Furniture</button>
 
-            <button className="btn-cancel" type="submit">Cancel</button>
+            <button className="btn-cancel" type="submit">Cancel</button> 
        
           </form>
 
