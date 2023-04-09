@@ -8,13 +8,10 @@ import { useParams } from "react-router-dom";
 
 import { useService } from "../../hooks/userService.js";
 import { furnitureServiceFactory } from "../../services/furnitureService.js";
+import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
-export const Edit = ({
-  onFurnitureEditSubmit,
-  
-
-}) => {
-  
+export const Edit = () => {
+  const { onFurnitureEditSubmit } = useFurnitureContext();
   const { furnitureId } = useParams();
   const furnitureService = useService(furnitureServiceFactory);
   const { values, changeHandler, onSubmit, changeValues } = useForm({

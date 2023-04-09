@@ -1,11 +1,13 @@
 import "./add.css";
 
 import { useForm } from "../../hooks/useForm.js";
+import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
 
 
 export const Add = () => {
 
+ 
   const {onCreateFurnitureSubmit} = useFurnitureContext()
   const {values, changeHandler, onSubmit} = useForm({
     kind: "",

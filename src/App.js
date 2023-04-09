@@ -1,10 +1,6 @@
-import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
-
-import { furnitureServiceFactory } from "./services/furnitureService";
+import { Routes, Route } from "react-router-dom";
 
 import { AuthProvider } from "./contexts/AuthContext.js";
-import { useService } from "./hooks/userService.js";
 
 import { Home } from "./components/Home/Home.js";
 import { Login } from "./components/Login/Login.js";
@@ -20,6 +16,7 @@ import { Logout } from "./components/Logout/Logout.js";
 import { Details } from "./components/Details/Details.js";
 import { Edit } from "./components/Edit/Edit.js";
 import { FurnitureProvider } from "./contexts/FurnitureContext.js";
+import { RouteGuard } from "./components/common/RouteGuard.js";
 
 function App() {
 
@@ -34,15 +31,19 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />;
             <Route path="/login" element={<Login />} />;
-            <Route path="logout" element={<Logout />} />;
             <Route path="/register" element={<Register />} />;
             <Route path="/add-furniture" element={<Add />}/>;
             <Route path="/catalog" element={<Catalog/>}/>;
             <Route path="/catalog/:furnitureId" element={<Details />} />
-            <Route path="/catalog/:furnitureId/edit" element={<Edit />}/>
             <Route path="/kitchens" element={<Kitchens />} />;
             <Route path="/woodcarvs" element={<Woodcarvs />} />;
             <Route path="/bedrooms" element={<Bedrooms />} />;
+
+            <Route element={<RouteGuard/>}>
+            <Route path="/add-furniture" element={<Add />}/>;
+            <Route path="/catalog/:furnitureId/edit" element={<Edit />}/>
+            <Route path="logout" element={<Logout />} />;
+              </Route>
           </Routes>
         </main>
         <Footer />

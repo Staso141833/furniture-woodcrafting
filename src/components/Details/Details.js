@@ -11,6 +11,7 @@ import { useAuthContext } from "../../contexts/AuthContext.js";
 import { furnitureServiceFactory } from "../../services/furnitureService.js";
 import { furnitureReducer } from "../../reducers/funritureReducer.js";
 import { AddComment } from "./AddComment.js";
+import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
 
 
@@ -18,10 +19,9 @@ export const Details = () => {
 
   const { userId, isAuthenticated, userEmail } = useAuthContext();
   const { furnitureId } = useParams();
+  const { deleteFurniture} = useFurnitureContext()
   const [furniture, dispatch] = useReducer(furnitureReducer, {})
   const furnitureService =  useService(furnitureServiceFactory);
-
-
 
   const navigate = useNavigate();
 
@@ -55,8 +55,18 @@ export const Details = () => {
 };
 
   const onDeleteClick = async () => {
-   await furnitureService.delete(furniture._id);
+
+   const result = ('Are you sure you want to delete this furniture?')
+
+   if (result) {
+    await furnitureService.delete(furniture._id);
+
+    deleteFurniture(furniture._id);
+    
     navigate('/catalog');
+   }
+
+   
 
   }
     

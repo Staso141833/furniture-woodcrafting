@@ -1,9 +1,13 @@
 import "./catalog.css";
+
+import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
+
 import { CatalogItem } from "./CatalogItem/CatalogItem.js";
 
-export const Catalog = ({ 
-  furnitures
- }) => {
+export const Catalog = () => {
+
+  const { furnitures } = useFurnitureContext();
+
   return (
     <section id="furnitures">
       <h2>Furnitures</h2>
