@@ -64,6 +64,7 @@ colors {
     color: #77472b;
     width: 60%;
     height: 60%;
+    background-color: #ad552153;
   }
 
   .details-comments-container ul {
@@ -157,7 +158,9 @@ colors {
     border: 4px inset #ffcf91;
     text-align: center;
   }
-
+  .comment-btn{
+    margin-top: 30px;
+  }
   .edit-btn:hover {
     background: #ffcf91;
     color: #6f3f21;

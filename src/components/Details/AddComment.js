@@ -10,12 +10,12 @@ export const AddComment = ({
       }, onCommentSubmit)
     return (
         <article className="comment-furniture">
-            <button className="comment-btn">Buy</button>
+            <button className="comment-btn">Comment</button>
             <form className="form" onSubmit={onSubmit}>
                     <input 
                     type="text" 
                     name="username" 
-                    placeholder='Пешо' 
+                    placeholder='Georgi' 
                     value={values.comment} 
                     onChange={changeHandler} />
                     

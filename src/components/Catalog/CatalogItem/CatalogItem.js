@@ -18,7 +18,7 @@ export const CatalogItem = ({
         <strong>Price:</strong>
         <span className="price">{price}</span>$
       </p>
-      <Link to={`/catalog/${_id}`} className="details-btn">Details</Link>
+      <Link to={`./${_id}`} className="details-btn">Details</Link>
       </div>
     
     </div>

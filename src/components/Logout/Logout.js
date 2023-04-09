@@ -7,7 +7,9 @@ export const Logout = () => {
     const { onLogout } = useContext(AuthContext);
 
     useEffect(() => {
+        localStorage.clear();
          onLogout()
+       
     }, [onLogout])
 
     return  <Navigate to="/" />

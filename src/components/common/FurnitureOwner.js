@@ -1,13 +1,13 @@
 import { useParams, Outlet, Navigate } from 'react-router-dom';
 import { useAuthContext } from '../../contexts/AuthContext';
 
-import { useGameContext } from "../../contexts/GameContext";
+import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
 export const FurnitureOwner = ({
     children,
 }) => {
     const { furnitureId } = useParams();
-    const { getFurniture } = useGameContext();
+    const { getFurniture } = useFurnitureContext();
     const { userId } = useAuthContext();
 
     const currentFurniture = getFurniture(furnitureId);

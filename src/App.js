@@ -17,6 +17,7 @@ import { Details } from "./components/Details/Details.js";
 import { Edit } from "./components/Edit/Edit.js";
 import { FurnitureProvider } from "./contexts/FurnitureContext.js";
 import { RouteGuard } from "./components/common/RouteGuard.js";
+import { FurnitureOwner } from "./components/common/FurnitureOwner.js";
 
 function App() {
 
@@ -40,10 +41,13 @@ function App() {
             <Route path="/bedrooms" element={<Bedrooms />} />;
 
             <Route element={<RouteGuard/>}>
-            <Route path="/add-furniture" element={<Add />}/>;
-            <Route path="/catalog/:furnitureId/edit" element={<Edit />}/>
-            <Route path="logout" element={<Logout />} />;
-              </Route>
+              <Route path="/add-furniture" element={<Add />}/>;
+              <Route path="/catalog/:furnitureId/edit" element={
+                <FurnitureOwner>
+                  <Edit />
+                </FurnitureOwner>}/>
+              <Route path="logout" element={<Logout />} />;
+            </Route>
           </Routes>
         </main>
         <Footer />
