@@ -61,64 +61,70 @@ export const Details = () => {
 
   return (
     <section id="details">
-      <div className="details-wrapper">
-        <div className="details-wrapper-img-container">
-          <img className="details-img" src={furniture.imageUrl} alt="dveri" />
-        </div>
 
-        <p className="details-kind-of-furniture">{furniture.kind}</p>
-        <p className="details-type-of-wood">
-          Wood type: <span className="type-of-wood-span">{furniture.wood}</span>
-        </p>
-        <p className="details-price">
-          Price: <span className="price-number">{furniture.price}</span>€
-        </p>
+      <div className="details-comments">
+            <div className="details-wrapper">
+              <div className="details-wrapper-img-container">
+                <img className="details-img" src={furniture.imageUrl} alt="dveri" />
+              </div>
 
-        <p className="details-width-height">
-          Width: {furniture.width}mm x Height: {furniture.height}mm
-        </p>
+              <p className="details-kind-of-furniture">{furniture.kind}</p>
+              <p className="details-type-of-wood">
+                Wood type: <span className="type-of-wood-span">{furniture.wood}</span>
+              </p>
+              <p className="details-price">
+                Price: <span className="price-number">{furniture.price}</span>€
+              </p>
 
-        <h4 className="details-comments">
-          Comments: <span className="comments">0</span> times.
-        </h4>
+              <p className="details-width-height">
+                Width: {furniture.width}mm x Height: {furniture.height}mm
+              </p>
 
-        <Link to={"/catalog"} className="back-btn">
-          Back
-        </Link>
-        {isOwner && ( 
-          <div className="action-buttons">
-            <Link to={`$catalog/${furniture._id}`} className="edit-btn">
-              Edit
-            </Link>
+              <h4 className="details-comments">
+                Comments: <span className="comments">0</span> times.
+              </h4>
 
-            <button className="delete-btn" onClick={onDeleteClick}>
-              Delete
-            </button>
-            {isAuthenticated && (
-              <AddComment onCommentSubmit={onCommentSubmit} />
-            )}
-          </div>
-        )}
+              <div className="edit-delete-back-btns">
+              <Link to={"/catalog"} className="back-btn">Back</Link>
+                {isOwner && (
+                  <div className="action-buttons">
+                  <Link to={`$catalog/${furniture._id}`} className="edit-btn">Edit</Link>
 
-  
+                  <button className="delete-btn" onClick={onDeleteClick}>Delete</button>
+                </div>
+              )}
+
+            </div>
+           </div>
+              <div className="details-comments-and-add-comments">
+                    <div className="details-comments-container">
+                          <h2 className="comments-title">Comments:</h2>
+                          <ul className="comments-ul">
+                            {furniture.comments &&
+                              furniture.comments.map((x) => (
+                                <li key={x._id} className="comment">
+                                  <p>
+                                    {x.author.email}:{x.comment}
+                                  </p>
+                                </li>
+                              ))}
+                          </ul>
+                          {!furniture.comments?.length && (
+                            <p className="no-comments">No comments</p>
+                          )}
+                        </div>
+
+                        {isAuthenticated && (
+                <div className="add-comment-container">
+                  <AddComment onCommentSubmit={onCommentSubmit} />
+
+                </div>
+              )}
+            </div>
       </div>
-
-      <div className="details-comments-container">
-          <h2>Comments:</h2>
-          <ul>
-            {furniture.comments &&
-              furniture.comments.map((x) => (
-                <li key={x._id} className="comment">
-                  <p>
-                    {x.author.email}:{x.comment}
-                  </p>
-                </li>
-              ))}
-          </ul>
-          {!furniture.comments?.length && (
-            <p className="no-comments">No comments</p>
-          )}
-        </div>
+      
+            
+  
     </section>
   );
 };

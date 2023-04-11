@@ -10,21 +10,15 @@ export const AddComment = ({
       }, onCommentSubmit)
     return (
         <article className="comment-furniture">
-            <button className="comment-btn">Comment</button>
-            <form className="form" onSubmit={onSubmit}>
-                    <input 
-                    type="text" 
-                    name="username" 
-                    placeholder='Georgi' 
-                    value={values.comment} 
-                    onChange={changeHandler} />
-                    
-                    <textarea name="comment" 
+        
+            <form className="form-add-comment" onSubmit={onSubmit}>
+                     
+                    <textarea className="text-area" name="comment" 
                     placeholder="Comment......" 
                     value={values.comment} 
                     onChange={changeHandler}>   
                     </textarea>
-                    <input className="btn submit" type="submit" value="Add Comment" />
+                    <input className="btn-add-comment" type="submit" value="Add Comment" />
                 </form>
         </article>
        

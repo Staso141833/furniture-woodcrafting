@@ -6,11 +6,11 @@ export const Woodcarvs = () => {
       <h2>Woodcarvs</h2>
       <div className="pictures-woodcarvs">
         <div className="picture-woodcarvs">
-          <img src="https://www.woodcarvingart.co.uk/wp-content/uploads/2021/06/Carved-Art-Panels.-Decorative-Art-Panels.-Carved-Wall-Panels.-Woodcarved-Panels.-Carved-Wood-Wall-Art.-Wall-Art-Panel-Woodcarving-1024x1024.jpg" alt="woodcarv"/>
+          <img src="../../../silverFrame.jpg" alt="woodcarv"/>
         </div>
 
         <div className="picture-woodcarvs">
-          <img src="https://previews.123rf.com/images/velirina/velirina1202/velirina120200078/12649762-wood-carved-ornament-on-the-wall-of-christian-church.jpg" alt="woodcarv"/>
+          <img src="../../../krast.jpg" alt="woodcarv"/>
         </div>
 
         <div className="picture-woodcarvs">
@@ -18,7 +18,7 @@ export const Woodcarvs = () => {
         </div>
 
         <div className="picture-woodcarvs">
-          <img src="https://media.istockphoto.com/id/1170788800/photo/wood-carving.jpg?s=612x612&w=0&k=20&c=UL8Dp1BGgI2-02YQkgA-IkdzrIRXcqQHZa4LSay8Ylg=" alt="woodcarv"/>
+          <img src="./lionNatural.jpg" alt="woodcarv"/>
         </div>
 
         <div className="picture-woodcarvs">
