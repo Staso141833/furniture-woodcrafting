@@ -12,10 +12,13 @@ colors {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    position:static;
+    height: auto;
   
   }
   
   .footer-social-media {
+    margin-top: 12px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,6 +47,10 @@ colors {
     font-weight: bold;
     margin-top: 10px;
     color: #93582c;
+  }
+
+  .footer-nav {
+    height: 50%;
   }
   
   
@@ -83,4 +90,6 @@ colors {
   
   .footer-copy-right p {
     color: #ffcf91;
+    padding-bottom: 14px;
+  
   }

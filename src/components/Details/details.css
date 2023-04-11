@@ -43,7 +43,6 @@ colors {
     flex-direction: column;
     align-items: center;
     border-radius: 4px;
-  
     flex: 0 1 auto;
   }
   
@@ -101,13 +100,12 @@ colors {
   }
   
   span {
-    font-size: 17px;
+    font-size: 16px;
   }
   
   .action-buttons {
     display: flex;
     justify-content: center;
-    margin-bottom: 8px;
   }
 
 
@@ -117,19 +115,16 @@ colors {
     color: #ffcf91;
   }
 
-  .edit-delete-back-btns {
+  .edit-delete-back-btns-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: auto;
+    margin-bottom: 10px;
+    /* margin: auto; */
 
   }
 
-  .edit-delete-back-btns button:hover {
-    background: #ffcf91;
-    color: #6f3f21;
-    border: 4px outset #6f3f21;
-  }
+
 
   .edit-btn,
   .back-btn,
@@ -146,13 +141,14 @@ colors {
     border: 4px inset #ffcf91;
     text-align: center;
   }
-  .comment-btn{
-    margin-top: 30px;
-  }
-  .edit-btn:hover {
+
+  .back-btn:hover,
+  .edit-btn:hover,
+  .delete-btn:hover {
     background: #ffcf91;
     color: #6f3f21;
     border: 4px outset #6f3f21;
+    cursor: pointer;
   }
 
   .details-comments-and-add-comments {
@@ -168,11 +164,12 @@ colors {
     font-size: 20px;
     color: #77472b;
     width: 80%;
-    height: 60%;
+    height: auto;
     margin-top: 80px;
     background-color: #ffcf91;
     border-radius: 4px;
     border: 2px solid #77472b;
+    box-shadow: 10px 20px 30px #77472b;
   }
 
   .details-comments-container ul {
@@ -213,10 +210,11 @@ colors {
 
   .add-comment-container {
     width: 100%;
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+   
   
   }
 
@@ -226,9 +224,10 @@ colors {
     flex-direction: row;
     align-items: center;
     width: 80%;
-    height: 100%;
-    margin-top: 120px;
-    justify-content: space-evenly;
+    height: 340px;
+    margin-top: 40px;
+   
+
   }
 
   .form-add-comment {
@@ -241,6 +240,7 @@ colors {
     border-radius: 8px;
     overflow: hidden;
     align-items: center;
+    box-shadow: 10px 20px 30px #77472b;
 
   }
 
@@ -252,14 +252,23 @@ colors {
   }
  
   .btn-add-comment {
-    background-color: #93582c;
+    background-color: #ffcf91fb;
+    color: #6f3f21;
     width: 40%;
-    margin: 6px 10px;
+    margin: 10px;
     padding: 12px 14px;
     font-weight: bold;
     font-size: 18px;
     letter-spacing: 2px;
     border-radius: 4px;
     border: 2px solid #ffcf91fb;
+    text-transform: uppercase;
+
+  }
+
+  .btn-add-comment:hover {
+    cursor: pointer;
+    background-color: #6f3f21;
+    color: #ffcf91fb;
   }
 

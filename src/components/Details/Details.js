@@ -84,19 +84,19 @@ export const Details = () => {
                 Comments: <span className="comments">0</span> times.
               </h4>
 
-              <div className="edit-delete-back-btns">
+              <div className="edit-delete-back-btns-container">
               <Link to={"/catalog"} className="back-btn">Back</Link>
                 {isOwner && (
                   <div className="action-buttons">
-                  <Link to={`$catalog/${furniture._id}`} className="edit-btn">Edit</Link>
-
-                  <button className="delete-btn" onClick={onDeleteClick}>Delete</button>
-                </div>
-              )}
-
-            </div>
+                    <Link to={`/catalog/:${furniture._id}/edit`} className="edit-btn">Edit</Link>
+                    <button className="delete-btn" onClick={onDeleteClick}>Delete</button>
+                  </div>
+              )}    
+              </div>
            </div>
-              <div className="details-comments-and-add-comments">
+
+
+            <div className="details-comments-and-add-comments">
                     <div className="details-comments-container">
                           <h2 className="comments-title">Comments:</h2>
                           <ul className="comments-ul">
@@ -106,20 +106,20 @@ export const Details = () => {
                                   <p>
                                     {x.author.email}:{x.comment}
                                   </p>
+                                
                                 </li>
                               ))}
+
+                              {!furniture.comments?.length && ( <p className="no-comments">No comments</p>)}
                           </ul>
-                          {!furniture.comments?.length && (
-                            <p className="no-comments">No comments</p>
-                          )}
+                      
                         </div>
 
                         {isAuthenticated && (
-                <div className="add-comment-container">
-                  <AddComment onCommentSubmit={onCommentSubmit} />
-
-                </div>
-              )}
+                      <div className="add-comment-container">
+                        <AddComment onCommentSubmit={onCommentSubmit} />  
+                      </div>
+                        )}
             </div>
       </div>
       

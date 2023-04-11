@@ -41,8 +41,13 @@ export const FurnitureProvider = ({
   };
 
   const deleteFurniture = (furnitureId) => {
-    setFurnitures((state) => state.filter((furniture) => furniture._id !== furnitureId)
-    );
+    const asking = window.confirm(`Are you sure you would like to delete this furniture?`);
+
+    if (asking){
+      setFurnitures((state) => state.filter((furniture) => furniture._id !== furnitureId));
+    }
+   
+  
   };
 
   const contextValues = {
