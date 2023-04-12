@@ -14,8 +14,8 @@ export const getAll = async (furnitureId) => {
     return comments;
 };
 
-export const create = async (furnitureId, sale) => {
-    const result = await request.post(baseUrl, {furnitureId, sale});
+export const create = async (furnitureId, comment) => {
+    const result = await request.post(baseUrl, {furnitureId, comment});
 
     return result;
 };

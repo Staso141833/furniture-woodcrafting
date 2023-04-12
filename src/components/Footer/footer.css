@@ -65,7 +65,7 @@ colors {
     text-decoration: none;
     color: rgb(166, 77, 8);
     background-color: #248c5800;
-    transition: width 1s, height 1s, background-color 1s, transform 1s;
+  
   }
   
   .footer-container .footer-nav .nav-ul .nav-items {
@@ -75,7 +75,8 @@ colors {
   
   .footer-container .footer-nav a {
     background-color: #248c5800;
-    color: rgb(166, 77, 8);
+    color: #93582c;
+    font-weight: bold;
     font-size: 22px;
   }
   
@@ -84,8 +85,9 @@ colors {
   } */
   
   .nav-items a:hover {
-    color: rgb(166, 77, 8);
+    background-color: #ffcf91;
     color: white;
+    transition: all 350ms;
   }
   
   .footer-copy-right p {

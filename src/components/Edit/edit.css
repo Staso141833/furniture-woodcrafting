@@ -22,10 +22,6 @@ colors {
   }
   
   .form-edit {
-     /* background-image: url("./brownTableNew.jpg");  */
-    /* background-color: #ffcf91; */
-    background-position: center;
-    background-size: cover;
     width: 100%;
     height: 85%;
     object-fit: cover;
@@ -82,7 +78,8 @@ colors {
     box-shadow: 4px 4px 60px 8px rgba(46, 219, 52, 0.855);
   }
   
-  .form-edit .btn-edit {
+  .form-edit .btn-edit,
+  .form-edit .btn-cancel {
     margin-top: 40px;
     margin-bottom: 12px;
     width: 62%;
@@ -97,6 +94,7 @@ colors {
     font-size: 14px;
     cursor: pointer;
     box-shadow: 4px 4px 40px 8px #ffcf91;
+    text-decoration: none;
   }
   
   .form-edit button:hover {
@@ -107,24 +105,13 @@ colors {
   .form-edit button:active {
     background: rgba(207, 87, 12, 0.454);
   }
-  
-  .form-edit .btn-cancel {
-    margin-top: 12px;
-    margin-bottom: 22px;
-    width: 42%;
-    border-radius: 8px;
-    background-color: #6f3f218c;
-    text-transform: uppercase;
-    outline: 0;
-    border: 0;
-    padding: 16px;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: 4px 4px 40px 8px #ffcf91;
+
+  .edit-cancel-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .form-edit:hover {
     margin: 4px;
   }
@@ -137,22 +124,6 @@ colors {
   }
   
   .edit-form-conainter .drop {
-    /* background-image: linear-gradient(
-      to bottom,
-      #6f3f21fd,
-      #764423,
-      #7c4825,
-      #834d27,
-      #8a5229,
-      #965d31,
-      #a2683a,
-      #ae7443,
-      #c28a55,
-      #d6a068,
-      #ebb87c,
-      #ffcf91
-    ); */
-  
     background-color: #77472b6b;
     backdrop-filter: blur(2px);
     border-radius: 16px;
@@ -225,12 +196,3 @@ colors {
     outline: none;
   }
   
-  .x {
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-  }
-  
-  .fad fa-times {
-    font-size: 32px;
-  }

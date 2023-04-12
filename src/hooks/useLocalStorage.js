@@ -18,7 +18,8 @@ export const useLocaleStorage = (key, initialValue) => {
     localStorage.setItem(key, JSON.stringify(value));
   };
 
-  return [state,
+  return [
+    state,
     setLocalStorageState,
   ];
 };

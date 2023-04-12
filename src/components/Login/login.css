@@ -14,18 +14,22 @@ colors {
     font-family: "Montserrat", sans-serif;
      /* background: linear-gradient(45deg, #ff8b0f69, #09ec4274);  */
   }
+
+  #login {
+    height: 90%;
+  }
   
   #login .form-conainter {
-    position: absolute;
+    position: relative;
     width: 36vw;
-    height: 64%;
-    top: 50%;
-    left: 53%;
+    height: 70%;
+    margin-top: 400px;
+    left: 54%;
     transform: translate(-50%, -50%);
   }
   
   .form-login {
-    padding: 3em;
+    padding: 10px;
     border-radius: 20px;
     height: 100%;
     width: 80%;
@@ -94,12 +98,6 @@ colors {
     box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
   }
   
-  /* .form-login input [type="email"],
-  .form-login input [type="password"]:focus {
-      background: rgba(255, 255, 255, 0.902);
-      box-shadow: 4px 4px 60px 8px rgba(12, 132, 16, 0.855);
-  }
-   */
   
   
    .form-login button {
@@ -142,7 +140,7 @@ colors {
   
   #login .form-conainter .drop {
     background-color: rgba(255, 255, 255, 0.194);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     border-radius: 16px;
     border-left: 1px solid white;
     border-top: 1px solid white;
@@ -203,14 +201,7 @@ colors {
     left: -40px;
     z-index: 1;
   }
-  
-  #login a,
-  #login input:focus,
-  #login select:focus,
-  #login textarea:focus,
-  #login button:focus {
-    outline: none;
-  }
+ 
   
   
   .have-not-registered {

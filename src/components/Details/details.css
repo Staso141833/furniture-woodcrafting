@@ -163,30 +163,16 @@ colors {
   .details-comments-container {
     font-size: 20px;
     color: #77472b;
-    width: 80%;
-    height: auto;
+    width: 90%;
+    height: 100%;
     margin-top: 80px;
     background-color: #ffcf91;
     border-radius: 4px;
     border: 2px solid #77472b;
     box-shadow: 10px 20px 30px #77472b;
+    overflow:auto;
   }
 
-  .details-comments-container ul {
-    font-size: 20px;
-    display: flex;
-    flex-direction: row;
-    width: 40%;
-    height: 30%;
-  }
-
-  .details-comments-container ul li {
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  
   .comments-title {
     text-align: center;
   }
@@ -201,12 +187,28 @@ colors {
     font-size: 16px;
   }
   .comments-ul {
+    font-size: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    width: 90%;
+    height: 10%;
 
   }
+
+  .comments-li {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comments-p {
+    width: 100%;
+  
+  }
+
 
   .add-comment-container {
     width: 100%;

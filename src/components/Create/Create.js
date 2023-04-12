@@ -1,11 +1,11 @@
-import "./add.css";
+import "./create.css";
 
 import { useForm } from "../../hooks/useForm.js";
 import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
 
 
-export const Add = () => {
+export const Create = () => {
 
  
   const {onCreateFurnitureSubmit} = useFurnitureContext()
@@ -13,7 +13,6 @@ export const Add = () => {
     kind: "",
     wood: "",
     width: "",
-    height: "",
     price: "",
     imageUrl: ""
   }, onCreateFurnitureSubmit)
@@ -23,15 +22,12 @@ export const Add = () => {
        <section id="create">
 
               
-        <div className="add-form-conainter">
+        <div className="create-form-conainter">
         
-          <div className="add-form-conainter-img">
-            <img src="https://preview.redd.it/traditional-filipino-wood-carving-art-v0-vlljsjsofiv91.jpg?width=640&crop=smart&auto=webp&s=9b3f9d5495235177ddba14b3b80811064e1b3cf6" alt=""/>
-          </div>
           <form className="form-create" method="POST" onSubmit={onSubmit}>
   
-             <div className="add-furniture">
-              <h2>Add your furniture</h2>
+             <div className="create-furniture">
+              <h2>Create your furniture</h2>
              </div>
         
              
@@ -62,14 +58,14 @@ export const Add = () => {
             onChange={changeHandler}
             />
             
-            <input
+            {/* <input
             type="text"
             name="height"
             id="height"
             placeholder="height in mm"
             value={values.height}
             onChange={changeHandler}
-            />
+            /> */}
 
             <input
             type="text"
@@ -89,7 +85,7 @@ export const Add = () => {
             onChange={changeHandler}
             />
 
-            <button className="btn-add" type="submit">Add Furniture</button>
+            <button className="btn-create" type="submit">Create Furniture</button>
 
             <button className="btn-cancel" type="submit">Cancel</button>
        

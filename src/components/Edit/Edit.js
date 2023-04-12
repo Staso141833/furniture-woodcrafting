@@ -19,7 +19,6 @@ export const Edit = () => {
     kind: '',
     wood: '',
     width: '',
-    height: '',
     price: '',
     imageUrl: '',
   }, onFurnitureEditSubmit);
@@ -54,7 +53,7 @@ export const Edit = () => {
 
             <input
               type="text"
-              name="wood-type"
+              name="wood"
               id="type-of-wood"
               placeholder="type of wood"
             value={values.wood}
@@ -70,14 +69,14 @@ export const Edit = () => {
             onChange={changeHandler}
             />
             
-            <input
+            {/* <input
             type="text"
             name="height"
             id="height"
             placeholder="height in mm"
             value={values.height}
             onChange={changeHandler}
-            />
+            /> */}
 
             <input
             type="text"
@@ -96,11 +95,10 @@ export const Edit = () => {
             value={values.imageUrl}
             onChange={changeHandler}
             />
-
-            <button className="btn-edit" type="submit">Edit Furniture</button>
-
-            <button className="btn-cancel" type="submit">Cancel</button> 
-       
+            <div className="edit-cancel-btns">
+              <button className="btn-edit" type="submit">Edit Furniture</button>
+              <Link to={`/catalog`} className="btn-cancel" type="submit">Cancel</Link> 
+            </div>
           </form>
 
           <div className="drops">

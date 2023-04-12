@@ -1339,9 +1339,8 @@
                 "kind": "CoverFire",
                 "wood": "Action",
                 "width": "70",
-                "height": "80",
                 "price": "5.77",
-                "imageUrl": "/images/CoverFire.png",
+                "imageUrl": "/public/tabla.jpg",
                 "_createdOn": 1617194128618,
             },
             "1840a313-225c-416a-817a-9954d4609f7c": {
@@ -1349,9 +1348,8 @@
                 "kind": "MineCraft",
                 "wood": "Arcade",
                 "width": "250",
-                "height": "80",
                 "price": "5.77",
-                "imageUrl": "/images/MineCraft.png",
+                "imageUrl": "/public/lions.jpg",
                 "_createdOn": 1617194210928,
             },
             "126777f5-3277-42ad-b874-76d043b069cb": {
@@ -1359,9 +1357,8 @@
                 "kind": "Zombie Lang",
                 "wood": "Vertical Shooter",
                 "width": "100",
-                "height": "80",
                 "price": "5.77",
-                "imageUrl": "/images/ZombieLang.png",
+                "imageUrl": "/public/dragons.jpg",
                 "_createdOn": 1617194295474,
             }
         },

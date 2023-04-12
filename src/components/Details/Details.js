@@ -102,9 +102,9 @@ export const Details = () => {
                           <ul className="comments-ul">
                             {furniture.comments &&
                               furniture.comments.map((x) => (
-                                <li key={x._id} className="comment">
-                                  <p>
-                                    {x.author.email}:{x.comment}
+                                <li key={x._id} className="comments-li">
+                                  <p className="comments-p">
+                                    {x.author.email}: {x.comment}
                                   </p>
                                 
                                 </li>

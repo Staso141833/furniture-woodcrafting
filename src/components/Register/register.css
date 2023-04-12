@@ -16,12 +16,12 @@ body {
 }
 
 #register .form-conainter {
-  position: absolute;
-  width: 36vw;
-  height: 64%;
-  top: 50%;
-  left: 53%;
-  transform: translate(-50%, -50%);
+  position: relative;
+    width: 36vw;
+    height: 70%;
+    margin-top: 400px;
+    left: 54%;
+    transform: translate(-50%, -50%);
 }
 
 .form-register {
