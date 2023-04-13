@@ -18,6 +18,8 @@ export const AuthProvider = ({
     const [auth, setAuth] = useLocaleStorage('auth', {});
     const authService = authServiceFactory(auth.accessToken);
 
+    const token = auth.accessToken;
+
     const onLoginSubmit = async (data) => {
 
         try {
@@ -49,8 +51,9 @@ export const AuthProvider = ({
         }
       }
 
-    const onLogout = async () => {
-        await authService.logout();
+    const onLogout = async (token) => {
+ 
+        await authService.logout(token);
         setAuth({});
       }
 

@@ -62,7 +62,7 @@ export const Details = () => {
   return (
     <section id="details">
 
-      <div className="details-comments">
+      <div id="details-comments">
             <div className="details-wrapper">
               <div className="details-wrapper-img-container">
                 <img className="details-img" src={furniture.imageUrl} alt="dveri" />
@@ -79,10 +79,6 @@ export const Details = () => {
               <p className="details-width-height">
                 Width: {furniture.width}mm x Height: {furniture.height}mm
               </p>
-
-              <h4 className="details-comments">
-                Comments: <span className="comments">0</span> times.
-              </h4>
 
               <div className="edit-delete-back-btns-container">
               <Link to={"/catalog"} className="back-btn">Back</Link>

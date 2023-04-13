@@ -6,8 +6,6 @@ export const CatalogItem = ({
   kind,
   price,
   imageUrl }) => {
-
-    console.log(`${_id}`)
   return (
     <div className="furniture">
       <img className="image" src={imageUrl} alt={imageUrl} />

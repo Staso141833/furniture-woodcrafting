@@ -1,6 +1,5 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
 import { furnitureServiceFactory } from "../services/furnitureService.js";
 
 export const FurnitureContext = createContext();
@@ -8,6 +7,7 @@ export const FurnitureContext = createContext();
 export const FurnitureProvider = ({ 
   children,
  }) => {
+
   const navigate = useNavigate();
   const [furnitures, setFurnitures] = useState([]);
   const furnitureService = furnitureServiceFactory(); //auth.accessToken
@@ -46,7 +46,7 @@ export const FurnitureProvider = ({
     if (asking){
       setFurnitures((state) => state.filter((furniture) => furniture._id !== furnitureId));
     }
-   
+
   
   };
 

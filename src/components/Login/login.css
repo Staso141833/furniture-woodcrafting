@@ -207,7 +207,7 @@ colors {
   .have-not-registered {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin: 20px 0px;
   }
 
   .have-not-registered .message {
