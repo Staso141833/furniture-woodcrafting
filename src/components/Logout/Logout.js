@@ -5,16 +5,14 @@ import { AuthContext } from "../../contexts/AuthContext.js";
 
 
  export const Logout = () => {
-   const { onLogout, token } = useContext(AuthContext);
+   const { onLogout } = useContext(AuthContext);
 
    useEffect(() => {
-
-    console.log(`${token}`)
-
-     localStorage.removeItem(token);
+    
     
      onLogout();
-   
+       localStorage.clear()
+     
    }, [onLogout]);
 
    return <Navigate to="/" />;

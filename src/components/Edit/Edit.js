@@ -25,11 +25,12 @@ export const Edit = () => {
 
   useEffect(() => {
     furnitureService.getOne(furnitureId)
-      .then(result => {
-        changeValues(result);
-      });
+       .then(result => {
+         changeValues(result);
+       });
+     
   }, [furnitureId]);
-
+ 
     return (
     <section id="edit">
         <div className="edit-form-conainter">
