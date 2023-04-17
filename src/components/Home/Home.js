@@ -8,7 +8,7 @@ export const Home = () => {
       </div>
       <div className="home-elements">
         <div className="home-list-items">
-          <ul>
+          {/* <ul>
             <li>
               <i className="fas fa-hand-point-right"></i>
               <a href="/">REAL WOOD</a>
@@ -17,7 +17,7 @@ export const Home = () => {
               <i className="fas fa-paint-brush"></i>
               <a href="/">ANY COLOR</a>
             </li>
-          </ul>
+          </ul> */}
         </div>
         <div className="home-background">
           <img id="background-pic" alt="kitchen" src="./kitchen1.jpg" />
