@@ -2,6 +2,7 @@ import "./create.css";
 
 import { useForm } from "../../hooks/useForm.js";
 import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
+import { useState } from "react";
 
 
 
@@ -17,7 +18,23 @@ export const Create = () => {
     imageUrl: ""
   }, onCreateFurnitureSubmit)
 
+  const [formErrors, setFormErrors] = useState({
+    kind: '',
+    lastName: '',
+});
 
+
+  const formValidate = (e) => {
+
+    const value = e.target.value;
+    const errors = {};
+
+    if (e.target.name === 'kind' && (value.length < 3 || value.length > 20)){
+      errors.kind = 'Kind should be between 3 and 20 characters';
+
+      setFormErrors(errors);
+    }
+  }
     return ( 
        <section id="create">
 
@@ -30,15 +47,21 @@ export const Create = () => {
               <h2>Create your furniture</h2>
              </div>
         
-             
-            <input
+             <div className="input-error-container">
+             <input
               type="text"
               name="kind"
               id="kind-of-furniture"
               placeholder="kind of furniture"
             value={values.kind}
             onChange={changeHandler}
+            onBlur={formValidate}
             />
+            <div>
+              {formErrors.kind && <p className="form-error">{formErrors.kind}</p>}
+            </div>
+             </div>
+           
 
             <input
               type="text"
@@ -57,15 +80,7 @@ export const Create = () => {
             value={values.width}
             onChange={changeHandler}
             />
-            
-            {/* <input
-            type="text"
-            name="height"
-            id="height"
-            placeholder="height in mm"
-            value={values.height}
-            onChange={changeHandler}
-            /> */}
+    
 
             <input
             type="text"
