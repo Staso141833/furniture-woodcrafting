@@ -20,39 +20,86 @@ export const Create = () => {
 
   const [formErrors, setFormErrors] = useState({
     kind: '',
-    lastName: '',
+    wood: '',
+    width: '',
+    price: '',
+    imageUrl: '',
 });
 
 
   const formValidate = (e) => {
 
     const value = e.target.value;
+    const fieldName = e.target.name;
     const errors = {};
 
-    if (e.target.name === 'kind' && (value.length < 5 || value.length > 20)){
-      errors.kind = 'Kind should be between 5 and 20 characters';
 
-    if (value.length < 5 || value.length > 20){
-      setFormErrors(errors);
-    } else {
-      errors.kind = null;
-      setFormErrors(errors);
-    }
-  } else if(e.target.name === 'wood' && (value.length < 3 || value.length > 20)){
-    errors.wood = 'The wood of the furniture should be between 3 and 20 characters';
+
+   if (fieldName === 'kind' && (value.length < 5 || value.length > 20)){
+     errors.kind = 'Kind should be between 5 and 20 characters.';
+
+     if (value.length < 5 || value.length > 20){
+      
+     } else {
+       errors.kind = '';
+       setFormErrors(errors);
+     }
+   } 
+
+ 
+ 
+  
+  if(fieldName === 'wood' && (value.length < 3 || value.length > 20)){
+    errors.wood = 'The wood of the furniture should be between 3 and 20 characters.';
 
     if (value.length < 3 || value.length > 20){
-      setFormErrors(errors);
+      
     } else {
-      errors.wood = null;
+      errors.wood = '';
       setFormErrors(errors);
     }
-
-    
- 
   }
 
+  
+
+  if (fieldName === 'width' && value.length === 0) {
+    errors.width = 'The width of the furniture should be greater than 0.';
+    
+    if (value.length === 0){
+     
+    } else {
+      errors.width = '';
+      setFormErrors(errors);
+    }
+  }
+
+  if (fieldName === 'price' && (value.length === 0 || value.length > 6)){
+    errors.price = 'Invalid price.';
+
+    if (value.length === 0 || value.length > 6) {
+      
+    } else {
+      errors.price = '';
+      setFormErrors(errors);
+    }
+  }
+
+  if (fieldName === 'imageUrl' && value.length === 0) {
+    errors.imageUrl = 'The field is required.';
+
+    if (value.length === 0){
+   
+    } else {
+      errors.imageUrl = '';
+      setFormErrors(errors);
+    }
+  }
+
+  setFormErrors(errors);
+
 }
+
+
     return ( 
        <section id="create">
 
@@ -106,9 +153,10 @@ export const Create = () => {
                       placeholder="width in mm"
                       value={values.width}
                       onChange={changeHandler}
+                      onBlur={formValidate}
                     />
                     <div className="form-error-container">
-                      {/* {formErrors.kind && <p className="form-error-p">{formErrors.kind}</p>} */}
+                       {formErrors.width && <p className="form-error-p">{formErrors.width}</p>}
                     </div>
                   </div>
         
@@ -118,13 +166,14 @@ export const Create = () => {
                       type="number"
                       name="price"
                       id="price"
-                      placeholder="price in euro"
+                      placeholder="example 159.99"
                       value={values.price}
                       onChange={changeHandler}
+                      onBlur={formValidate}
                     />
 
                     <div className="form-error-container">
-                      {/* {formErrors.kind && <p className="form-error-p">{formErrors.kind}</p>} */}
+                    {formErrors.price && <p className="form-error-p">{formErrors.price}</p>}
                     </div>
                   </div>
             
@@ -136,9 +185,10 @@ export const Create = () => {
                       placeholder="image url"
                       value={values.imageUrl}
                       onChange={changeHandler}
+                      onBlur={formValidate}
                       />
                     <div className="form-error-container">
-                      {/* {formErrors.kind && <p className="form-error-p">{formErrors.kind}</p>} */}
+                       {formErrors.imageUrl && <p className="form-error-p">{formErrors.imageUrl}</p>} 
                     </div>
 
                   </div>
