@@ -35,65 +35,53 @@ export const Create = () => {
 
 
 
-   if (fieldName === 'kind' && (value.length < 5 || value.length > 20)){
-     errors.kind = 'Kind should be between 5 and 20 characters.';
+    if (fieldName === 'kind' && (value.length < 5 || value.length > 20)){
+        errors.kind = 'Kind should be between 5 and 20 characters.';
 
-     if (value.length < 5 || value.length > 20){
-      
-     } else {
-       errors.kind = '';
-       setFormErrors(errors);
-     }
-   } 
-
- 
- 
-  
-  if(fieldName === 'wood' && (value.length < 3 || value.length > 20)){
-    errors.wood = 'The wood of the furniture should be between 3 and 20 characters.';
-
-    if (value.length < 3 || value.length > 20){
-      
-    } else {
-      errors.wood = '';
-      setFormErrors(errors);
+    }  else {
+        errors.kind = '';
+        setFormErrors(errors);
     }
-  }
-
+ 
   
+    if(fieldName === 'wood' && (value.length < 3 || value.length > 20)){
+        errors.wood = 'The wood of the furniture should be between 3 and 20 characters.';
 
-  if (fieldName === 'width' && value.length === 0) {
-    errors.width = 'The width of the furniture should be greater than 0.';
+    } else {
+        errors.wood = '';
+        setFormErrors(errors);
+    }
+
+
+    if (fieldName === 'width' && value < 50) {
+        errors.width = 'The width of the furniture should be equal or greater than 50mm.';
+        
+    } else if (fieldName === 'width' && value > 200){
+        errors.width = 'The width of the furniture should be equal or smaller than 200mm.'
+    }else {
+        errors.width = '';
+        setFormErrors(errors);
+    }
+
+
+    if (fieldName === 'price' && (value.length === 0 || value.length > 6)){
+        errors.price = 'Invalid price.';
+
+    } else {
+        errors.price = '';
+        setFormErrors(errors);
+    }
+
+
+    if (fieldName === 'imageUrl' && value.length === 0) {
+        errors.imageUrl = 'The field is required.';
     
-    if (value.length === 0){
-     
     } else {
-      errors.width = '';
-      setFormErrors(errors);
+        errors.imageUrl = '';
+        setFormErrors(errors);
     }
-  }
 
-  if (fieldName === 'price' && (value.length === 0 || value.length > 6)){
-    errors.price = 'Invalid price.';
 
-    if (value.length === 0 || value.length > 6) {
-      
-    } else {
-      errors.price = '';
-      setFormErrors(errors);
-    }
-  }
-
-  if (fieldName === 'imageUrl' && value.length === 0) {
-    errors.imageUrl = 'The field is required.';
-
-    if (value.length === 0){
-   
-    } else {
-      errors.imageUrl = '';
-      setFormErrors(errors);
-    }
-  }
 
   setFormErrors(errors);
 
