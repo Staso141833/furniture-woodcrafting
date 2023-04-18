@@ -17,17 +17,12 @@ const requester = async (method, url, data) => {
   if (serializedAuth) {
     const auth = JSON.parse(serializedAuth);
 
-
-
-     if (auth.accessToken){
-       options.headers = {
-         ...options.headers,
-         "X-Authorization": auth.accessToken,
-       };
-
-  
-     }
- 
+    if (auth.accessToken) {
+      options.headers = {
+        ...options.headers,
+        "X-Authorization": auth.accessToken,
+      };
+    }
   }
 
   const response = await fetch(url, options);
@@ -38,11 +33,10 @@ const requester = async (method, url, data) => {
 
   const result = await response.json();
 
-    
   if (!response.ok) {
     throw result;
   }
- 
+
   return result;
 };
 

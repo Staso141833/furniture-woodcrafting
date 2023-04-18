@@ -12,7 +12,6 @@ import { Kitchens } from "./components/Kitchens/Kitchens.js";
 import { Woodcarvs } from "./components/Woodcarvs/Woodcarvs.js";
 import { Bedrooms } from "./components/Bedrooms/Bedrooms.js";
 import { Catalog } from "./components/Catalog/Catalog.js";
-import { Logout }from "./components/Logout/Logout.js";
 import { Details } from "./components/Details/Details.js";
 import { Edit } from "./components/Edit/Edit.js";
 import { FurnitureProvider } from "./contexts/FurnitureContext.js";
@@ -46,7 +45,6 @@ function App() {
                 <FurnitureOwner>
                   <Edit />
                 </FurnitureOwner>}/>
-              <Route path="logout" element={<Logout />} />;
             </Route>
           </Routes>
         </main>
