@@ -11,7 +11,7 @@ import { AuthContext } from "../../contexts/AuthContext.js";
     
     
      onLogout();
-       localStorage.clear()
+      localStorage.clear()
      
    }, [onLogout]);
 

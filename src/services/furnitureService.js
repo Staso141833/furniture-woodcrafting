@@ -1,11 +1,11 @@
 import { requestFactory } from "./requester.js";
 
-const baseUrl = 'http://localhost:3030/data/furnitures';
+const baseUrl = 'http://localhost:3030/data/  furnitures';
 
 export const furnitureServiceFactory = (token) => {
     const request = requestFactory(token);
     
-    const getAll = async () => {
+  const getAll = async () => {
     const result = await request.get(baseUrl);
     const furnitures = Object.values(result);
 
@@ -15,7 +15,6 @@ export const furnitureServiceFactory = (token) => {
   const getOne = async (furnitureId) => {
     const result = await request.get(`${baseUrl}/${furnitureId}`);
     
-
     return result;
   };
 

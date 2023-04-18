@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { useForm } from "../../hooks/useForm.js";
 import { useParams } from "react-router-dom";
 
-import { useService } from "../../hooks/userService.js";
+import { useService } from "../../hooks/useService.js";
 import { furnitureServiceFactory } from "../../services/furnitureService.js";
 import { useFurnitureContext } from "../../contexts/FurnitureContext.js";
 
@@ -27,6 +27,7 @@ export const Edit = () => {
     furnitureService.getOne(furnitureId)
        .then(result => {
          changeValues(result);
+       
        });
      
   }, [furnitureId]);
@@ -70,14 +71,6 @@ export const Edit = () => {
             onChange={changeHandler}
             />
             
-            {/* <input
-            type="text"
-            name="height"
-            id="height"
-            placeholder="height in mm"
-            value={values.height}
-            onChange={changeHandler}
-            /> */}
 
             <input
             type="text"
