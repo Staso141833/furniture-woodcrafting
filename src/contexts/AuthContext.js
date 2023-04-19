@@ -45,9 +45,10 @@ export const AuthProvider = ({ children }) => {
       const token = auth.accessToken;
 
       await authService.logout(token);
+
       successCallback();
       setAuth({});
-      navigate('/')
+      navigate("/");
     } catch (error) {
       console.log("There is a problem!");
     }

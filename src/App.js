@@ -19,37 +19,38 @@ import { RouteGuard } from "./components/common/RouteGuard.js";
 import { FurnitureOwner } from "./components/common/FurnitureOwner.js";
 
 function App() {
-
-
   return (
     <AuthProvider>
       <FurnitureProvider>
-      <div id="box">
-        <Navigation />
+        <div id="box">
+          <Navigation />
 
-        <main id="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />;
-            <Route path="/login" element={<Login />} />;
-            <Route path="/register" element={<Register />} />;
-            <Route path="/add-furniture" element={<Create />}/>;
-            <Route path="/catalog" element={<Catalog/>}/>;
-            <Route path="/catalog/:furnitureId" element={<Details />} />
-            <Route path="/kitchens" element={<Kitchens />} />;
-            <Route path="/woodcarvs" element={<Woodcarvs />} />;
-            <Route path="/bedrooms" element={<Bedrooms />} />;
-
-            <Route element={<RouteGuard/>}>
-              <Route path="/add-furniture" element={<Create />}/>;
-              <Route path="/catalog/:furnitureId/edit" element={
-                <FurnitureOwner>
-                  <Edit />
-                </FurnitureOwner>}/>
-            </Route>
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+          <main id="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />;
+              <Route path="/login" element={<Login />} />;
+              <Route path="/register" element={<Register />} />;
+              <Route path="/add-furniture" element={<Create />} />;
+              <Route path="/catalog" element={<Catalog />} />;
+              <Route path="/catalog/:furnitureId" element={<Details />} />
+              <Route path="/kitchens" element={<Kitchens />} />;
+              <Route path="/woodcarvs" element={<Woodcarvs />} />;
+              <Route path="/bedrooms" element={<Bedrooms />} />;
+              <Route element={<RouteGuard />}>
+                <Route path="/add-furniture" element={<Create />} />;
+                <Route
+                  path="/catalog/:furnitureId/edit"
+                  element={
+                    <FurnitureOwner>
+                      <Edit />
+                    </FurnitureOwner>
+                  }
+                />
+              </Route>
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </FurnitureProvider>
     </AuthProvider>
   );

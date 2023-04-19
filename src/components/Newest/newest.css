@@ -8,68 +8,64 @@ colors {
 */
 
 .products {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-    gap: 16px;
-  
-  }
-  #newest h2 {
-    color: #6f3f21;
-    text-align: center;
-    font-size: 50px;
-  }
-  
-  .product {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content:space-evenly;
-    width: 21vw;
-    height: 55vh;
-    margin: auto;
-    margin-bottom: 32px;
-    background-color: #ffcf9140;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid #77472b;
-    box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-  -webkit-box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-  -moz-box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-   
-  }
-  .product img {
-    height:58%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+#newest h2 {
+  color: #6f3f21;
+  text-align: center;
+  font-size: 50px;
+}
 
-    
-  }
-  .details-btn {
-    text-decoration: none;
-    font-size: 18px;
-    width: 160px;
-    border-radius: 4px;
-    text-align: center;
-    color: whitesmoke;
-    background: #77472b;
-    padding: 4px 12px;
-    margin-bottom: 12px;
-  }
-  .details-btn:hover {
-    background: whitesmoke;
-    color: #77472b;
-  }
-  .product p {
-    margin: auto;
-    font-size: 22px;
-    font-weight: 700;
-    width: 50%;
-    text-align: center;
-    color: #93582c;
-  }
-  
-  .product span {
-    padding: 10px;
-    margin: auto;
-  }
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 21vw;
+  height: 55vh;
+  margin: auto;
+  margin-bottom: 32px;
+  background-color: #ffcf9140;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #77472b;
+  box-shadow: -4px 3px 25px 1px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: -4px 3px 25px 1px rgba(0, 0, 0, 0.55);
+  -moz-box-shadow: -4px 3px 25px 1px rgba(0, 0, 0, 0.55);
+}
+.product img {
+  height: 58%;
+}
+.details-btn {
+  text-decoration: none;
+  font-size: 18px;
+  width: 160px;
+  border-radius: 4px;
+  text-align: center;
+  color: whitesmoke;
+  background: #77472b;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+.details-btn:hover {
+  background: whitesmoke;
+  color: #77472b;
+}
+.product p {
+  margin: auto;
+  font-size: 22px;
+  font-weight: 700;
+  width: 50%;
+  text-align: center;
+  color: #93582c;
+}
+
+.product span {
+  padding: 10px;
+  margin: auto;
+}

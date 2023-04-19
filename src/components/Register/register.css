@@ -12,20 +12,20 @@ colors {
 body {
   height: 100vh;
   font-family: "Montserrat", sans-serif;
-   /* background: linear-gradient(45deg, #ff8b0f69, #09ec4274);  */
+  /* background: linear-gradient(45deg, #ff8b0f69, #09ec4274);  */
 }
 
 #register .form-conainter {
   position: relative;
-    width: 36vw;
-    height: 70%;
-    margin-top: 400px;
-    left: 54%;
-    transform: translate(-50%, -50%);
+  width: 36vw;
+  height: 70%;
+  margin-top: 400px;
+  left: 54%;
+  transform: translate(-50%, -50%);
 }
 
 .form-register {
- background: rgba(105, 41, 41, 0);
+  background: rgba(105, 41, 41, 0);
   padding: 3em;
   border-radius: 20px;
   height: 100%;
@@ -37,15 +37,21 @@ body {
   text-align: center;
   position: relative;
   transition: all 0.2s ease-in-out;
-  background-image: linear-gradient(to right top, #93592cbd, #ae7343a1, #c9925cb3, #e4b176a0, #ffcf918c);
-} 
+  background-image: linear-gradient(
+    to right top,
+    #93592cbd,
+    #ae7343a1,
+    #c9925cb3,
+    #e4b176a0,
+    #ffcf918c
+  );
+}
 
 .form-register h2 {
   margin: 44px 0px;
   font-size: 32px;
   color: #6f3f21;
 }
-
 
 .have-not-registered a:hover {
   text-shadow: 2px 2px 6px #1a111188;
@@ -67,12 +73,11 @@ body {
   border-radius: 40px;
   backdrop-filter: blur(1px);
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-  color: #8E4D13;
+  color: #8e4d13;
   font-family: Montserrat, sans-serif;
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-
 }
 .form-register input:hover {
   background: rgba(255, 255, 255, 0.367);
@@ -85,7 +90,6 @@ body {
     box-shadow: 4px 4px 60px 8px rgba(12, 132, 16, 0.855);
 }
  */
-
 
 .form-register button {
   margin-top: 10px;
@@ -197,7 +201,6 @@ body {
   outline: none;
 }
 
-
 .already-registered {
   display: flex;
   flex-direction: row;
@@ -208,7 +211,6 @@ body {
 .already-registered p {
   color: whitesmoke;
   font-size: 20px;
-  
 }
 
 .already-registered i {
@@ -221,6 +223,4 @@ body {
   text-decoration: none;
   color: whitesmoke;
   font-size: 20px;
-  
 }
-  

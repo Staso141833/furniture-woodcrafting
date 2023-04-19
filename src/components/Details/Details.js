@@ -76,9 +76,7 @@ export const Details = () => {
             Price: <span className="price-number">{furniture.price}</span>€
           </p>
 
-          <p className="details-width-height">
-            Width: {furniture.width}mm
-          </p>
+          <p className="details-width-height">Width: {furniture.width}mm</p>
 
           <div className="edit-delete-back-btns-container">
             <Link to={"/catalog"} className="back-btn">

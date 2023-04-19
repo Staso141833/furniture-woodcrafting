@@ -1,3 +1,5 @@
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
+
 /*
 colors {
     blackBrown: #6f3f21,
@@ -8,191 +10,233 @@ colors {
 */
 
 #edit {
-    height: 90vh;
-  
-  }
-  
-  #edit .edit-form-conainter {
-    position: absolute;
-    max-width: 600px;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-  
-  .form-edit {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
-    padding: 3em;
-    border-radius: 20px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    position: relative;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .edit-form-conainter .form-edit .edit-furniture {
-    background-color: rgba(245, 245, 245, 0.622);
-    border-radius: 8px;
-  }
-  
-  .form-edit h2 {
-    margin-bottom: 54px;
-    font-size: 28px;
-    color: #77472b;
-    padding: 8px 0px;
-    text-transform: uppercase;
-  }
-  
-  .form-edit input {
-    background: transparent;
-    width: 80%;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: none;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    border-radius: 50px;
-    backdrop-filter: blur(3px);
-    box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-    color: white;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    transition: all 0.2s ease-in-out;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  .form-edit input:hover {
-    background: rgba(245, 245, 245, 0.596);
-    color: #6f3f21;
-    font-weight: bold;
-    box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
-  }
-  
-  .form-edit input [type="text"]:focus {
-    background: rgba(172, 18, 18, 0.854);
-    box-shadow: 4px 4px 60px 8px rgba(46, 219, 52, 0.855);
-  }
-  
-  .form-edit .btn-edit,
-  .form-edit .btn-cancel {
-    margin-top: 40px;
-    margin-bottom: 12px;
-    width: 62%;
-    border-radius: 8px;
-    background-color: #6f3f21c6;
-    text-transform: uppercase;
-    outline: 0;
-    border: 0;
-    padding: 16px;
-    color: whitesmoke;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    box-shadow: 4px 4px 40px 8px #ffcf91;
-    text-decoration: none;
-  }
-  
-  .form-edit button:hover {
-    cursor: pointer;
-    box-shadow: 4px 4px 40px 8px rgba(207, 87, 12, 0.454);
-  }
-  
-  .form-edit button:active {
-    background: rgba(207, 87, 12, 0.454);
-  }
+  height: 90vh;
+}
 
-  .edit-cancel-btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+#edit .edit-form-conainter {
+  position: absolute;
+  width: 32%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
 
-  .form-edit:hover {
-    margin: 4px;
-  }
-  
-  .form-edit input::placeholder {
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  }
-  
-  .edit-form-conainter .drop {
-    background-color: #77472b6b;
-    backdrop-filter: blur(2px);
-    border-radius: 16px;
-    border-left: 1px solid white;
-    border-top: 1px solid white;
-    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    transition: all 0.2s ease;
-  }
-  
-  .edit-form-conainter .drops .drop-1 {
-    height: 80px;
-    width: 80px;
-    top: -10px;
-    left: -20px;
-    z-index: -1;
-  }
-  
-  .edit-form-conainter .drops .drop-2 {
-    height: 80px;
-    width: 80px;
-    bottom: 250px;
-    right: 560px;
-  }
-  
-  .edit-form-conainter .drops .drop-3 {
-    height: 100px;
-    width: 100px;
-    bottom: 120px;
-    right: -50px;
-    z-index: 1;
-  }
-  
-  .edit-form-conainter .drops .drop-4 {
-    height: 60px;
-    width: 120px;
-    top: -10px;
-    right: -50px;
-  }
-  
-  .edit-form-conainter .drops .drop-5 {
-    height: 80px;
-    width: 120px;
-    bottom: 400px;
-    left: 520px;
-    z-index: -1;
-  }
-  
-  .edit-form-conainter .drops .drop-6 {
-    height: 60px;
-    width: 120px;
-    bottom: 140px;
-    left: -30px;
-    z-index: -3;
-  }
-  
-  .edit-form-conainter .drops .drop-7 {
-    height: 60px;
-    width: 80px;
-    bottom: 350px;
-    left: -40px;
-    z-index: -1;
-  }
-  
-  a,
-  input:focus,
-  select:focus,
-  textarea:focus,
-  button:focus {
-    outline: none;
-  }
-  
+.form-edit {
+  background-position: center;
+  width: 100%;
+  height: 85%;
+  padding: 1em;
+  border-radius: 20px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.edit-form-conainter .form-edit .edit-furniture {
+  background-color: rgba(245, 245, 245, 0.622);
+  border-radius: 8px;
+  height: 12%;
+}
+
+.form-edit h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #77472b;
+  padding: 8px 0px;
+  text-transform: uppercase;
+}
+
+.form-edit input {
+  background: transparent;
+  width: 80%;
+  padding: 16px;
+  margin-bottom: 2px;
+  border: none;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50px;
+  backdrop-filter: blur(3px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #93582c;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.form-edit input:hover {
+  background: rgba(245, 245, 245, 0.596);
+  color: #6f3f21;
+  font-weight: bold;
+  box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
+}
+
+.form-edit input [type="text"]:focus {
+  background: rgba(172, 18, 18, 0.854);
+  box-shadow: 4px 4px 60px 8px rgba(46, 219, 52, 0.855);
+}
+
+.form-error {
+  font-size: 14px;
+}
+
+.input-container {
+  height: 76%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 12px;
+}
+
+.input-error-container {
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-error-container {
+  height: 40%;
+  width: 100%;
+  padding-bottom: 12px;
+  font-size: 16px;
+}
+
+.form-error-p {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(128, 11, 0);
+  height: 30%;
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.edit-cancel-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.form-edit .btn-edit,
+.form-edit .btn-cancel {
+  width: 62%;
+  border-radius: 8px;
+  background-color: #6f3f21c6;
+  text-transform: uppercase;
+  outline: 0;
+  border: 0;
+  padding: 16px;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 4px 4px 40px 8px #ffcf91;
+  text-decoration: none;
+}
+
+.form-edit button:hover {
+  cursor: pointer;
+  box-shadow: 4px 4px 40px 8px rgba(207, 87, 12, 0.454);
+}
+
+.form-edit button:active {
+  background: rgba(207, 87, 12, 0.454);
+}
+
+.edit-cancel-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-edit:hover {
+  margin: 4px;
+}
+
+.form-edit input::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+  color: #6f3f21;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.edit-form-conainter .drop {
+  background-color: #77472b6b;
+  backdrop-filter: blur(2px);
+  border-radius: 16px;
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+.edit-form-conainter .drops .drop-1 {
+  height: 80px;
+  width: 80px;
+  top: -10px;
+  left: -20px;
+  z-index: -1;
+}
+
+.edit-form-conainter .drops .drop-2 {
+  height: 80px;
+  width: 80px;
+  bottom: 250px;
+  right: 560px;
+}
+
+.edit-form-conainter .drops .drop-3 {
+  height: 100px;
+  width: 100px;
+  bottom: 120px;
+  right: -50px;
+  z-index: 1;
+}
+
+.edit-form-conainter .drops .drop-4 {
+  height: 60px;
+  width: 120px;
+  top: -10px;
+  right: -50px;
+}
+
+.edit-form-conainter .drops .drop-5 {
+  height: 80px;
+  width: 120px;
+  bottom: 400px;
+  left: 520px;
+  z-index: -1;
+}
+
+.edit-form-conainter .drops .drop-6 {
+  height: 60px;
+  width: 120px;
+  bottom: 140px;
+  left: -30px;
+  z-index: -3;
+}
+
+.edit-form-conainter .drops .drop-7 {
+  height: 60px;
+  width: 80px;
+  bottom: 350px;
+  left: -40px;
+  z-index: -1;
+}
+
+a,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

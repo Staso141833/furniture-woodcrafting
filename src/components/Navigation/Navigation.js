@@ -55,14 +55,14 @@ export const Navigation = () => {
 
               {isAuthenticated && (
                 <>
-                  {/* <li className="nav-items"> <p className="userEmail">your email: <span>{userEmail}</span></p></li> */}
                   <li className="nav-items">
                     <Link to="/add-furniture">Create product</Link>
                   </li>
                   <li className="nav-items">
                     <Link
                       onClick={() => {
-                        onLogout(() => {localStorage.clear();
+                        onLogout(() => {
+                          localStorage.clear();
                         });
                       }}
                     >

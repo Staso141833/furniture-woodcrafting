@@ -4,10 +4,7 @@ import { furnitureServiceFactory } from "../services/furnitureService.js";
 
 export const FurnitureContext = createContext();
 
-export const FurnitureProvider = ({ 
-  children,
- }) => {
-
+export const FurnitureProvider = ({ children }) => {
   const navigate = useNavigate();
   const [furnitures, setFurnitures] = useState([]);
   const furnitureService = furnitureServiceFactory(); //auth.accessToken
@@ -41,13 +38,15 @@ export const FurnitureProvider = ({
   };
 
   const deleteFurniture = (furnitureId) => {
-    const asking = window.confirm(`Are you sure you would like to delete this furniture?`);
+    const asking = window.confirm(
+      `Are you sure you would like to delete this furniture?`
+    );
 
-    if (asking){
-      setFurnitures((state) => state.filter((furniture) => furniture._id !== furnitureId));
+    if (asking) {
+      setFurnitures((state) =>
+        state.filter((furniture) => furniture._id !== furnitureId)
+      );
     }
-
-  
   };
 
   const contextValues = {
