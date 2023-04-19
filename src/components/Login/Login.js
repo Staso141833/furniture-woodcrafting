@@ -31,9 +31,9 @@ export const Login = () => {
 
     if (
       values[LoginFormKeys.Email].length < 10 ||
-      values[LoginFormKeys.Email] > 20
+      values[LoginFormKeys.Email].length > 32
     ) {
-      errors.email = "Email should be between 10 and 20 characters";
+      errors.email = "Email should be between 10 and 32 characters";
     } else {
       errors.email = "";
     }

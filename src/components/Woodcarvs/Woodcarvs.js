@@ -6,11 +6,11 @@ export const Woodcarvs = () => {
       <h2>Woodcarvs</h2>
       <div className="pictures-woodcarvs">
         <div className="picture-woodcarvs">
-          <img src="../../../silverFrame.jpg" alt="woodcarv" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO57Zv-mUf-MudSkJJ3vUiTijnMguwK4D2R81m-s0aKKJfkYDQ7xeP2hTADfKz3jCShYo&usqp=CAU" alt="woodcarv" />
         </div>
 
         <div className="picture-woodcarvs">
-          <img src="../../../krast.jpg" alt="woodcarv" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLXsfvkAIRh32n68wO6YoWsnfnx6ZydoU_g&usqp=CAU" alt="woodcarv" />
         </div>
 
         <div className="picture-woodcarvs">

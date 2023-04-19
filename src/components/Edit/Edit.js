@@ -80,6 +80,7 @@ export const Edit = () => {
     }
 
     setFormErrors(errors);
+
     const hasErrors = Object.values(errors).some((error) => error);
 
     if (!hasErrors) {
@@ -122,8 +123,8 @@ export const Edit = () => {
                 onChange={changeHandler}
               />
               <div className="form-error-container">
-                {formErrors.kind && (
-                  <p className="form-error-p">{formErrors.kind} Yeaah</p>
+                {formErrors.wood && (
+                  <p className="form-error-p">{formErrors.wood} Yeaah</p>
                 )}
               </div>
             </div>
@@ -138,8 +139,8 @@ export const Edit = () => {
                 onChange={changeHandler}
               />
               <div className="form-error-container">
-                {formErrors.kind && (
-                  <p className="form-error-p">{formErrors.kind}</p>
+                {formErrors.width && (
+                  <p className="form-error-p">{formErrors.width}</p>
                 )}
               </div>
             </div>
@@ -154,8 +155,8 @@ export const Edit = () => {
                 onChange={changeHandler}
               />
               <div className="form-error-container">
-                {formErrors.kind && (
-                  <p className="form-error-p">{formErrors.kind}</p>
+                {formErrors.price && (
+                  <p className="form-error-p">{formErrors.price}</p>
                 )}
               </div>
             </div>
@@ -170,8 +171,8 @@ export const Edit = () => {
                 onChange={changeHandler}
               />
               <div className="form-error-container">
-                {formErrors.kind && (
-                  <p className="form-error-p">{formErrors.kind}</p>
+                {formErrors.imageUrl && (
+                  <p className="form-error-p">{formErrors.imageUrl}</p>
                 )}
               </div>
             </div>

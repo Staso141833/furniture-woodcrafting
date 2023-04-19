@@ -18,14 +18,13 @@ body {
 #register .form-conainter {
   position: relative;
   width: 36vw;
-  height: 70%;
+  height: 80%;
   margin-top: 400px;
   left: 54%;
   transform: translate(-50%, -50%);
 }
 
 .form-register {
-  background: rgba(105, 41, 41, 0);
   padding: 3em;
   border-radius: 20px;
   height: 100%;
@@ -53,11 +52,11 @@ body {
   color: #6f3f21;
 }
 
-.have-not-registered a:hover {
+.message:hover {
   text-shadow: 2px 2px 6px #1a111188;
 }
 
-.have-not-registered a:active {
+.message:active {
   text-shadow: none;
 }
 
@@ -66,16 +65,16 @@ body {
   background: transparent;
   width: 60%;
   padding: 20px;
-  margin-bottom: 32px;
+  margin-bottom: 4px;
   border: none;
   border-left: 1px solid white;
   border-top: 1px solid white;
   border-radius: 40px;
   backdrop-filter: blur(1px);
   box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
-  color: #8e4d13;
+  color: #77472b;
   font-family: Montserrat, sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   transition: all 0.2s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -84,12 +83,32 @@ body {
   box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
 }
 
-/* .form-register input [type="email"],
-.form-register input [type="password"]:focus {
+.register-input-error {
+  height: 16vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 8px;
+}
+
+.register-error-container {
+  font-size: 16px;
+  height: 40%;
+  padding: 20px 12px;
+  margin-bottom: 32px;
+}
+
+.register-error-container-p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6f3f21;
+}
+/* .form-register input [name="email"],
+.form-register input [name="password"]:focus {
     background: rgba(255, 255, 255, 0.902);
     box-shadow: 4px 4px 60px 8px rgba(12, 132, 16, 0.855);
-}
- */
+} */
 
 .form-register button {
   margin-top: 10px;
