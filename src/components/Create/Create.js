@@ -120,7 +120,7 @@ export const Create = () => {
                 type="number"
                 name="width"
                 id="width"
-                placeholder="width in mm"
+                placeholder="width in cm"
                 value={values.width}
                 onChange={changeHandler}
               />

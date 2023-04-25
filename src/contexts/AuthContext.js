@@ -9,7 +9,6 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const navigate = useNavigate();
-
   const [auth, setAuth] = useLocaleStorage("auth", {});
   const authService = authServiceFactory(auth.accessToken);
 

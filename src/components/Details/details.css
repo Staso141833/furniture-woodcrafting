@@ -218,7 +218,7 @@ span {
   flex-direction: row;
   align-items: center;
   width: 80%;
-  height: 340px;
+  height: 100%;
   margin-top: 40px;
 }
 
@@ -227,7 +227,7 @@ span {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 64%;
+  height: 100%;
   border: 2px solid #ffcf91fb;
   border-radius: 8px;
   overflow: hidden;
@@ -240,6 +240,22 @@ span {
   height: 70%;
   margin: 12px;
   width: 80%;
+}
+
+.error-container {
+
+
+}
+
+.error-container p {
+  margin: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffcf91;
+  opacity: 0.9;
+  text-shadow: 2px 2px 12px #ffcf91;
+  
+
 }
 
 .btn-add-comment {
