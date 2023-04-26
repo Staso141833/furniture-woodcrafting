@@ -58,17 +58,15 @@ colors {
   font-size: 18px;
 }
 .details-wrapper-img-container {
-  width: 60%;
+  width: 100%;
   height: 45%;
 }
 
 .details-wrapper img {
-  display: block;
-  margin: 12px auto;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border: 2px inset #77472b;
+  /* border: 2px inset #77472b; */
   border-radius: 2px;
   transition: transform 300ms ease-in-out;
 }
@@ -202,6 +200,9 @@ span {
 
 .comments-p {
   width: 100%;
+  background-color: #6f3f212a;
+  border-radius: 8px;
+  padding: 6px;
 }
 
 .add-comment-container {
@@ -242,11 +243,6 @@ span {
   width: 80%;
 }
 
-.error-container {
-
-
-}
-
 .error-container p {
   margin: 8px;
   font-weight: bold;
@@ -254,8 +250,6 @@ span {
   color: #ffcf91;
   opacity: 0.9;
   text-shadow: 2px 2px 12px #ffcf91;
-  
-
 }
 
 .btn-add-comment {
@@ -276,4 +270,48 @@ span {
   cursor: pointer;
   background-color: #6f3f21;
   color: #ffcf91fb;
+}
+
+@media (max-width: 1300px) {
+  #details {
+    height: 95vh;
+  }
+
+  #details-comments {
+    height: 80%;
+    gap: 24px;
+  }
+
+  .details-wrapper {
+    margin: 70px 0px;
+    margin-left: 160px;
+    height: 100%;
+    width: 46%;
+    gap: 18px;
+  }
+
+
+  .details-wrapper-img-container {
+    width: 100%;
+    height: 55%;
+  }
+  .details-wrapper img:hover {
+    transform: scale(1.3);
+  }
+
+  .edit-delete-back-btns-container {
+    gap: 20px;
+  }
+
+  .edit-btn,
+  .back-btn,
+  .delete-btn {
+    margin: auto;
+    font-size: 18px;
+    width: 100px;
+  }
+
+  .action-buttons {
+    gap: 20px;
+  }
 }

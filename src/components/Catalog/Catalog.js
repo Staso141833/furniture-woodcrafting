@@ -14,7 +14,7 @@ export const Catalog = () => {
       {furnitures.length === 0 && (
           <h3 className="no-furnitures">No furnitures yet</h3>
         )}
-      <div className="furnitures-class">
+      <div className="furnitures-container">
         {furnitures.map((furniture) => (<CatalogItem key={furniture._id} {...furniture} />))};
        
       </div>

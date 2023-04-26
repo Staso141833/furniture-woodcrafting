@@ -8,101 +8,118 @@ colors {
 */
 
 #furnitures {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; 
-    gap: 16px;
-  
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+#furnitures h2 {
+  color: #6f3f21;
+  text-align: center;
+  font-size: 50px;
+}
+
+.no-furnitures {
+  color: #6f3f21;
+  text-align: center;
+  font-size: 52px;
+  align-items: center;
+}
+
+.furnitures-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.furniture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 21vw;
+  height: 55vh;
+  margin: auto;
+  margin-bottom: 32px;
+  background-color: #ffcf9140;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #77472b;
+  box-shadow: -4px 3px 25px 1px rgba(0, 0, 0, 0.55);
+}
+
+.image {
+  height: 60%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.furniture-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 36%;
+  width: 100%;
+  gap: 16px;
+}
+
+.furniture-content .kind {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #93582c;
+}
+
+.furniture-content .price {
+  padding: 10px;
+  margin-bottom: 24px;
+  font-weight: bold;
+  color: #93582c;
+}
+
+.furniture-content .details-btn {
+  text-decoration: none;
+  font-size: 18px;
+  width: 36%;
+  border-radius: 4px;
+  text-align: center;
+  color: whitesmoke;
+  background: #77472b;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+.details-btn:hover {
+  background: whitesmoke;
+  color: #77472b;
+}
+
+@media (max-width: 1300px) {
+
+  #furnitures {
+    margin-top: 16px;
+    gap: 12px;
   }
+
   #furnitures h2 {
     color: #6f3f21;
     text-align: center;
-    font-size: 50px;
+    font-size: 44px;
   }
 
-  .no-furnitures {
-    color: #6f3f21;
-    text-align: center;
-    font-size: 52px;
-    align-items: center;
-
-  }
-
-  .furnitures-class {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  
   .furniture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    justify-content:space-between;
-    width: 21vw;
-    height: 55vh;
-    margin: auto;
-    margin-bottom: 32px;
-    background-color: #ffcf9140;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid #77472b;
-    box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-  -webkit-box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-  -moz-box-shadow: -4px 3px 25px 1px rgba(0,0,0,0.55);
-  }
-   
-  .image {
-    height:60%;
-    width: 100%;
-    object-fit: contain;
-
-  }
-
-
-  .furniture-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 36%;
-    width: 100%;
-    gap: 16px;
-  }
-
-
-  
-
-
-  .furniture-content .kind {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    color: #93582c;
-  }
-  
-  .furniture-content .price {
-    padding: 10px;
-    margin-bottom: 24px;
-    font-weight: bold;
-    color: #93582c;
-    
-  }
-
-  .furniture-content .details-btn {
-    text-decoration: none;
-    font-size: 18px;
+    justify-content: space-evenly;
     width: 36%;
-    border-radius: 4px;
-    text-align: center;
-    color: whitesmoke;
-    background: #77472b;
-    padding: 4px 12px;
-    margin-bottom: 12px;
+    height: 40%;
+
+
   }
-  .details-btn:hover {
-    background: whitesmoke;
-    color: #77472b;
+
+  .image {
+    height: 30%;
+    width: 100%;
   }
+
+}

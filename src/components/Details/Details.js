@@ -66,7 +66,7 @@ export const Details = () => {
           <div className="details-wrapper-img-container">
             <img className="details-img" src={furniture.imageUrl} alt="dveri" />
           </div>
-
+          <div className="details-wrapper-content-container">
           <p className="details-kind-of-furniture">{furniture.kind}</p>
           <p className="details-type-of-wood">
             Wood type:{" "}
@@ -77,6 +77,8 @@ export const Details = () => {
           </p>
 
           <p className="details-width-height">Width: {furniture.width}mm</p>
+          </div>
+     
 
           <div className="edit-delete-back-btns-container">
             <Link to={"/catalog"} className="back-btn">
