@@ -54,7 +54,7 @@ colors {
 .image {
   height: 60%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .furniture-content {
@@ -101,17 +101,18 @@ colors {
   #furnitures {
     margin-top: 16px;
     gap: 12px;
+    margin-bottom: 240px;
   }
 
   #furnitures h2 {
     color: #6f3f21;
     text-align: center;
-    font-size: 44px;
+    font-size: 34px;
   }
 
   .furniture {
     justify-content: space-evenly;
-    width: 36%;
+    width: 26%;
     height: 40%;
 
 

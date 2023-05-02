@@ -14,15 +14,15 @@ colors {
 */
 
 .home-header-1 {
-  font-size: 44px;
+  font-size: 34px;
   text-align: center;
   color: #6f3f21;
   height: auto;
+  padding: 16px;
 }
 
 .home-header-1 h1 {
   margin: auto;
-  background-color: #ffcf91;
   max-height: 100%;
 }
 

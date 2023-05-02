@@ -21,7 +21,7 @@ colors {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 54px;
+  gap: 44px;
 }
 
 .footer-social-media .connect-ges {
