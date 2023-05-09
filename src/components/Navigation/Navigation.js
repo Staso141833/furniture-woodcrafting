@@ -34,7 +34,7 @@ export const Navigation = () => {
           </div>
         </div>
 
-        <div>
+        <div className="nav-container">
           <nav>
             <ul className="nav-ul">
               <li className="nav-items">

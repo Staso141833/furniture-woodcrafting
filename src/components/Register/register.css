@@ -17,9 +17,9 @@ body {
 
 #register .form-conainter {
   position: relative;
-  width: 36vw;
-  height: 80%;
-  margin-top: 400px;
+  width: 32vw;
+  height: 74%;
+  margin-top: 440px;
   left: 54%;
   transform: translate(-50%, -50%);
 }
@@ -150,7 +150,7 @@ body {
 
 #register .form-conainter .drop {
   background-color: rgba(255, 255, 255, 0.194);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(1px);
   border-radius: 16px;
   border-left: 1px solid white;
   border-top: 1px solid white;
@@ -171,7 +171,7 @@ body {
   height: 80px;
   width: 80px;
   bottom: -30px;
-  right: 80px;
+  right: 70px;
 }
 
 #register .form-conainter .drop-3 {
@@ -242,4 +242,17 @@ body {
   text-decoration: none;
   color: whitesmoke;
   font-size: 20px;
+}
+
+
+@media (max-width: 1300px) {
+  #register .form-conainter {
+    position: relative;
+    width: 44%;
+    height: 70%;
+    margin-top: 400px;
+  };
+
+  
+
 }

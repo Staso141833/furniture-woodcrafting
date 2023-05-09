@@ -69,7 +69,6 @@ colors {
 }
 
 .footer-container .footer-nav a {
-  background-color: #248c5800;
   color: #93582c;
   font-weight: bold;
   font-size: 22px;
@@ -84,4 +83,33 @@ colors {
 .footer-copy-right p {
   color: #ffcf91;
   padding-bottom: 14px;
+}
+
+@media (max-width: 800px) {
+  .footer-social-media {
+    margin-top: 4px;
+  }
+
+  .footer-social-media .social-media .fab.fa-facebook-f,
+.footer-social-media .social-media .fab.fa-twitter,
+.footer-social-media .social-media .fab.fa-linkedin-in,
+.footer-social-media .social-media .fab.fa-instagram,
+.footer-social-media .social-media .fab.fa-youtube {
+  font-size: 18px;
+}
+
+.footer-container .footer-nav {
+  margin-bottom: 10px;
+}
+
+  .footer-container .footer-nav a {
+    font-size: 20px;
+  }
+
+  .footer-copy-right {
+    margin-top: 10px;
+  }
+  .footer-copy-right p {
+    font-size: 16px;
+  }
 }

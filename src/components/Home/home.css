@@ -70,3 +70,10 @@ colors {
 
   
 }
+
+
+@media (max-width: 800px) {
+  .home-header-1 {
+    font-size: 24px;
+  }
+}

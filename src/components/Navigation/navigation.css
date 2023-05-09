@@ -41,28 +41,11 @@ body {
   font-size: 26px;
 }
 
-.fab.fa-facebook-f {
-  /* color: blue; */
-  color: #93582c;
-}
-
-.fab.fa-twitter {
-  /* color: rgb(0, 174, 255); */
-  color: #93582c;
-}
-
-.fab.fa-linkedin-in {
-  /* color: rgb(0, 183, 255); */
-  color: #93582c;
-}
-
-.fab.fa-instagram {
-  /* color: blueviolet; */
-  color: #93582c;
-}
-
+.fab.fa-facebook-f,
+.fab.fa-twitter,
+.fab.fa-linkedin-in,
+.fab.fa-instagram,
 .fab.fa-youtube {
-  /* color: red; */
   color: #93582c;
 }
 
@@ -153,7 +136,26 @@ body {
   display: block;
 }
 
-.userEmail {
-  font-size: 18px;
-  color: #77472b;
+@media (max-width: 800px) {
+
+
+  .nav-ul {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .nav-items {
+    text-decoration: none;
+    list-style: none;
+    font-size: 12px;
+  }
+
+  .logo img {
+    width: 66px;
+    height: 66px;
+  }
+
+  .social-media a i {
+    font-size: 20px;
+  }
 }

@@ -124,3 +124,15 @@ colors {
   }
 
 }
+
+@media (max-width: 800px) {
+  #furnitures {
+    margin-top: 0px;
+    gap: 4px;
+    margin-bottom: 40px;
+  }
+
+  #furnitures h2 {
+    font-size: 32px;
+  }
+}
