@@ -124,7 +124,7 @@ export const Edit = () => {
               />
               <div className="form-error-container">
                 {formErrors.wood && (
-                  <p className="form-error-p">{formErrors.wood} Yeaah</p>
+                  <p className="form-error-p">{formErrors.wood}</p>
                 )}
               </div>
             </div>

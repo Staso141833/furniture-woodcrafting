@@ -41,7 +41,6 @@ colors {
 
 .create-form-conainter .form-create .create-furniture {
   background-color: rgba(245, 245, 245, 0.622);
-  border-radius: 8px;
   height: 12%;
 }
 
@@ -238,14 +237,11 @@ button:focus {
   outline: none;
 }
 
-
 @media (max-width: 1300px) {
-
   #create .create-form-conainter {
     height: 95%;
- 
   }
-  
+
   .form-create h2 {
     font-size: 24px;
   }
@@ -277,7 +273,136 @@ button:focus {
     width: 80px;
     bottom: 440px;
     left: 150px;
+  }
+}
 
+@media (max-width: 800px) {
+  #create { 
+    margin-bottom: 90px;
   }
 
+  #create .create-form-conainter {
+    width: 42%;
+    margin-top: 30px;
+    height: 100%;
+ 
+  }
+
+  .create-furniture {
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.661);
+    margin-bottom: 4px;
+    
+  }
+
+  .form-create h2 {
+    font-size: 16px;
+    margin: 10px;
+  }
+  .form-create {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #93582c;
+  }
+
+  .input-container {
+    gap: 6px;
+  }
+
+  .form-create input {
+    width: 90%;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .form-create input::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .input-error-container {
+    height: 18%;
+    margin-bottom: 6px;
+    
+  }
+
+  .form-error-container {
+    font-size: 14px;
+    padding-bottom: 12px;
+    color: #6f3f21;
+  }
+
+  .form-error-p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffcf91;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .create-cancel-btns {
+   margin-top: 12px;
+}
+
+
+  .form-create .btn-create,
+  .form-create .btn-cancel {
+    width: 60%;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .create-form-conainter .drop {
+    background-color: #ffcf9178;
+    backdrop-filter: blur(2px);
+  }
+
+  .create-form-conainter .drops .drop-2 {
+    right: 210px;
+    z-index: -2;
+  }
+
+  .create-form-conainter .drops .drop-3 {
+    height: 90px;
+    width: 70px;
+    right: -40px;
+    bottom: 20px;
+  }
+
+  .create-form-conainter .drops .drop-4 {
+    height: 40px;
+    width: 80px;
+    top: 10px;
+    right: -40px;
+  }
+
+  .create-form-conainter .drops .drop-5 {
+    width: 120px;
+    bottom: 280px;
+    left: 160px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .create-form-conainter .drops .drop-6 {
+    width: 80px;
+    bottom: 20px;
+    left: -40px;
+    z-index: 1;
+  }
+
+  .create-form-conainter .drops .drop-7 {
+    height: 20px;
+    bottom: 356px;
+    left: -40px;
+    z-index: 1;
+    opacity: 0.5;
+  }
 }

@@ -38,14 +38,13 @@ colors {
   justify-content: space-around;
 }
 
-.edit-form-conainter .form-edit .edit-furniture {
+.edit-furniture {
   background-color: rgba(245, 245, 245, 0.622);
-  border-radius: 8px;
   height: 12%;
 }
 
 .form-edit h2 {
-  margin-bottom: 24px;
+  margin: 24px;
   font-size: 28px;
   color: #77472b;
   padding: 8px 0px;
@@ -102,6 +101,10 @@ colors {
   justify-content: space-evenly;
 }
 
+.form-error-container {
+  padding-bottom: 12px;
+  color: #6f3f21;
+}
 .form-error-container {
   font-size: 16px;
   padding-bottom: 12px;
@@ -241,17 +244,14 @@ button:focus {
 }
 
 @media (max-width: 1300px) {
-
   #edit .edit-form-conainter {
     height: 95%;
-
- 
   }
 
   .form-edit {
     background-color: #77472bd8;
   }
-  
+
   .form-edit h2 {
     font-size: 24px;
   }
@@ -283,13 +283,10 @@ button:focus {
     width: 80px;
     bottom: 440px;
     left: 150px;
-
   }
 
-  
   .form-edit input {
     color: white;
- 
   }
 
   .form-edit input:hover {
@@ -298,6 +295,132 @@ button:focus {
     font-weight: bold;
     box-shadow: 4px 4px 60px 8px rgba(217, 100, 22, 0.252);
   }
-  
-  
+}
+
+@media (max-width: 800px) {
+  #edit { 
+    margin-bottom: 90px;
+  }
+
+  #edit .edit-form-conainter {
+    width: 42%;
+    margin-top: 30px;
+    height: 100%;
+  }
+
+  .edit-furniture {
+    height: 10%;
+    background-color: rgba(255, 255, 255, 0.661);
+    margin-bottom: 4px;
+  }
+
+  .form-edit h2 {
+    font-size: 16px;
+    margin: 10px;
+  }
+  .form-edit {
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .input-container {
+    gap: 6px;
+  }
+
+  .form-edit input {
+    width: 90%;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .form-edit input::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .input-error-container {
+    height: 18%;
+    margin-bottom: 6px;
+    
+  }
+
+  .form-error-container {
+    font-size: 14px;
+    padding-bottom: 12px;
+    color: #6f3f21;
+  }
+
+  .form-error-p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffcf91;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2px;
+  }
+
+  .edit-cancel-btns {
+   margin-top: 12px;
+}
+
+
+  .form-edit .btn-edit,
+  .form-edit .btn-cancel {
+    width: 60%;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+
+  .edit-form-conainter .drop {
+    background-color: #ffcf9178;
+    backdrop-filter: blur(2px);
+  }
+
+  .edit-form-conainter .drops .drop-2 {
+    right: 210px;
+    z-index: -2;
+  }
+
+  .edit-form-conainter .drops .drop-3 {
+    height: 90px;
+    width: 70px;
+    right: -40px;
+    bottom: 20px;
+  }
+
+  .edit-form-conainter .drops .drop-4 {
+    height: 40px;
+    width: 80px;
+    top: 10px;
+    right: -40px;
+  }
+
+  .edit-form-conainter .drops .drop-5 {
+    width: 120px;
+    bottom: 280px;
+    left: 160px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .edit-form-conainter .drops .drop-6 {
+    width: 80px;
+    bottom: 20px;
+    left: -40px;
+    z-index: 1;
+  }
+
+  .edit-form-conainter .drops .drop-7 {
+    height: 20px;
+    bottom: 356px;
+    left: -40px;
+    z-index: 1;
+    opacity: 0.5;
+  }
 }
