@@ -77,11 +77,9 @@ export const Register = () => {
               onChange={changeHandler}
             />
 
-            <div className="register-error-container">
-              {formErrors.email && (
-                <p className="register-error-container-p">{formErrors.email}</p>
-              )}
-            </div>
+            {formErrors.email && (
+              <p className="register-error-container-p">{formErrors.email}</p>
+            )}
           </div>
           <div className="register-input-error">
             <input
@@ -92,7 +90,7 @@ export const Register = () => {
               value={values.password}
               onChange={changeHandler}
             />
-            <div className="register-error-container">
+            <div className="two-errors-container">
               {formErrors.password && (
                 <p className="register-error-container-p">
                   {formErrors.password}
@@ -115,7 +113,7 @@ export const Register = () => {
               value={values.rePassword}
               onChange={changeHandler}
             />
-            <div className="register-error-container">
+            <div className="two-errors-container">
               {formErrors.rePassword && (
                 <p className="register-error-container-p">
                   {formErrors.rePassword}
@@ -129,9 +127,11 @@ export const Register = () => {
             </div>
           </div>
 
-          <button className="btn-register" type="submit">
-            Register
-          </button>
+          <div className="btn-container">
+            <button className="btn-register" type="submit">
+              Register
+            </button>
+          </div>
           <div className="already-registered">
             <p className="message">
               Already registered?<i className="fas fa-angle-double-right"></i>{" "}

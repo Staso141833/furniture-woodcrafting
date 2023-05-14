@@ -101,7 +101,7 @@ export const Login = () => {
           <div className="have-not-registered">
             <p className="message">You haven't registered yet? </p>
             <i className="fas fa-angle-double-down"></i>
-            <Link to="/register">Register</Link>
+            <Link to="/register"><span className="register">Register</span></Link>
           </div>
         </form>
 
