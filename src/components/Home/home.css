@@ -77,3 +77,16 @@ colors {
     font-size: 24px;
   }
 }
+
+@media (max-width: 360px) {
+  .home-header-1 {
+    font-size: 20px;
+  }
+
+  #background-pic {
+    height: 50vh;
+  }
+
+
+  
+}

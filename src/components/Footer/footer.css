@@ -14,6 +14,7 @@ colors {
   justify-content: space-evenly;
   position: static;
   height: auto;
+  align-items: center;
 }
 
 .footer-social-media {
@@ -56,6 +57,7 @@ colors {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
   gap: 14px;
   font-weight: bold;
   padding: 0px 5px;
@@ -91,16 +93,16 @@ colors {
   }
 
   .footer-social-media .social-media .fab.fa-facebook-f,
-.footer-social-media .social-media .fab.fa-twitter,
-.footer-social-media .social-media .fab.fa-linkedin-in,
-.footer-social-media .social-media .fab.fa-instagram,
-.footer-social-media .social-media .fab.fa-youtube {
-  font-size: 18px;
-}
+  .footer-social-media .social-media .fab.fa-twitter,
+  .footer-social-media .social-media .fab.fa-linkedin-in,
+  .footer-social-media .social-media .fab.fa-instagram,
+  .footer-social-media .social-media .fab.fa-youtube {
+    font-size: 18px;
+  }
 
-.footer-container .footer-nav {
-  margin-bottom: 10px;
-}
+  .footer-container .footer-nav {
+    margin-bottom: 10px;
+  }
 
   .footer-container .footer-nav a {
     font-size: 20px;
@@ -111,5 +113,48 @@ colors {
   }
   .footer-copy-right p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-social-media {
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .footer-social-media .connect-ges {
+    display: none;
+  }
+
+  .footer-social-media .social-media {
+    align-items: center;
+  }
+
+  .footer-social-media .social-media .fab.fa-facebook-f,
+  .footer-social-media .social-media .fab.fa-twitter,
+  .footer-social-media .social-media .fab.fa-linkedin-in,
+  .footer-social-media .social-media .fab.fa-instagram,
+  .footer-social-media .social-media .fab.fa-youtube {
+    font-size: 22px;
+  }
+
+  .footer-container .footer-nav .nav-ul {
+    gap: 4px;
+    color: #77472b;
+    width: 100%;
+  }
+
+  .footer-container .footer-nav a {
+    font-size: 14px;
+    color: whitesmoke;
+    text-shadow: 4px 4px 4px #ffcf91a3;
+  }
+
+  .footer-copy-right p {
+    color: wheat;
+    padding-bottom: 14px;
+    font-size: 14px;
   }
 }

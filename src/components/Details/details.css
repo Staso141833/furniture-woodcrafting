@@ -321,8 +321,7 @@ span {
 @media (max-width: 800px) {
   #details {
     height: 100%;
-     margin-top: 40px;
-    
+    margin: 40px 0px;
   }
 
   .details-wrapper {
@@ -341,7 +340,6 @@ span {
 
   .details-wrapper-content-container {
     gap: 8px;
-
   }
 
   .edit-delete-back-btns-container {
@@ -385,7 +383,7 @@ span {
   }
   .comment-furniture {
     width: 100%;
-}
+  }
 
   .add-comment-container {
     height: 40vh;
@@ -396,8 +394,7 @@ span {
     margin: 6px;
     width: 80%;
   }
-  
-  
+
   .btn-add-comment {
     width: 44%;
     margin: 12px;
@@ -405,7 +402,4 @@ span {
     font-size: 14px;
     letter-spacing: 1px;
   }
-  
-
-
 }
