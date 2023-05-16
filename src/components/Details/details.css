@@ -8,18 +8,17 @@ colors {
 */
 
 #details {
-  /* position: relative; */
   width: 100vw;
   height: 100vh;
-  top: 25%;
-  left: 20%;
-  transform: translate(-10%, 0%);
+  margin-bottom: 64px;
 }
 
 #details-comments {
   height: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .details-comments-count {
@@ -39,7 +38,6 @@ colors {
     #77472bc3
   );
   margin: 80px 0px;
-  margin-left: 240px;
   height: 92%;
   width: 56%;
   border: 2px ridge #6f3f21;
@@ -52,15 +50,18 @@ colors {
   gap: 34px;
 }
 
-.details-wrapper p {
-  color: #6f3f21;
-  text-align: center;
-  font-size: 18px;
-}
+
+
 .details-wrapper-img-container {
   margin-top: 40px;
   width: 100%;
   height: 45%;
+}
+
+.details-wrapper p {
+  color: #6f3f21;
+  text-align: center;
+  font-size: 18px;
 }
 
 .details-wrapper-content-container {
@@ -287,7 +288,6 @@ span {
 
   .details-wrapper {
     margin: 70px 0px;
-    margin-left: 160px;
     height: 100%;
     width: 46%;
     gap: 18px;
@@ -326,7 +326,6 @@ span {
 
   .details-wrapper {
     margin: 20px 0px;
-    margin-left: 120px;
     height: 82vh;
     width: 50%;
     gap: 8px;
@@ -402,4 +401,36 @@ span {
     font-size: 14px;
     letter-spacing: 1px;
   }
+}
+
+@media (max-width: 360px) {
+  #details {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 44px;
+  }
+
+
+  .details-wrapper {
+    height: 70vh;
+    width: 90%;
+    gap: 14px;
+  }
+
+
+  .details-comments-and-add-comments {
+    width: 74%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .details-wrapper-img-container {
+    margin-top: 0px;
+    width: 100%;
+    height: 50%;
+  }
+
 }

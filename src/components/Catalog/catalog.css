@@ -13,6 +13,7 @@ colors {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 16px;
+  height: auto;
 }
 #furnitures h2 {
   color: #6f3f21;
@@ -32,6 +33,7 @@ colors {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .furniture {
@@ -97,7 +99,6 @@ colors {
 }
 
 @media (max-width: 1300px) {
-
   #furnitures {
     margin-top: 16px;
     gap: 12px;
@@ -114,15 +115,12 @@ colors {
     justify-content: space-evenly;
     width: 26%;
     height: 40%;
-
-
   }
 
   .image {
     height: 30%;
     width: 100%;
   }
-
 }
 
 @media (max-width: 800px) {
@@ -134,5 +132,58 @@ colors {
 
   #furnitures h2 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 360px) {
+  #furnitures {
+    margin-top: 0px;
+  }
+
+  #furnitures h2 {
+    font-size: 28px;
+  }
+
+  .no-furnitures {
+    font-size: 26px;
+  }
+
+  .furnitures-container {
+    flex-direction: column;
+  }
+
+  .furniture {
+    flex-direction: column;
+    width: 80%;
+    height: 44vh;
+    margin-bottom: 12px;
+  }
+
+  .image {
+    height: 60%;
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .furniture-content {
+    height: 40%;
+    gap: 8px;
+  }
+
+  .furniture-content .kind {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .furniture-content .price {
+    font-size: 18px;
+ 
+  }
+
+  .furniture-content .details-btn {
+    font-size: 16px;
+    width: 46%;
+    background: #77472b;
+    padding: 4px 10px;
   }
 }

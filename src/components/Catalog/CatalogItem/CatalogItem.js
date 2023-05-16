@@ -14,7 +14,7 @@ export const CatalogItem = ({
       <p className="kind">{kind}</p>
       <p>
         <strong>Price:</strong>
-        <span className="price">{price}</span>$
+        <span className="price">{price}eu</span>
       </p>
       <Link to={`./${_id}`} className="details-btn">Details</Link>
       </div>

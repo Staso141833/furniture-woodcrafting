@@ -5,7 +5,7 @@ export const Kitchens = () => {
     <section id="kitchens">
       <h2>Kitchens</h2>
 
-      <div className="pictures-kitchen">
+      <div className="pictures-kitchens">
         <div className="picture-kitchen">
           <img
             src="https://kbbtestsite.co.uk/wp-content/uploads/sites/122/2021/11/Nobilia-Indigo-U-Shaped-Kitchen.jpg"
