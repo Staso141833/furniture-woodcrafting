@@ -406,3 +406,14 @@ button:focus {
     opacity: 0.5;
   }
 }
+
+@media (max-width: 360px) {
+
+  #create .create-form-conainter {
+    width: 80%;
+    margin-top: 0px;
+    height: 90%;
+}
+
+
+}
