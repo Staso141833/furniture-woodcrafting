@@ -40,7 +40,7 @@ colors {
 }
 
 .create-form-conainter .form-create .create-furniture {
-  background-color: rgba(245, 245, 245, 0.622);
+  /* background-color: rgba(245, 245, 245, 0.622); */
   height: 12%;
 }
 
@@ -277,7 +277,7 @@ button:focus {
 }
 
 @media (max-width: 800px) {
-  #create { 
+  #create {
     margin-bottom: 90px;
   }
 
@@ -285,14 +285,12 @@ button:focus {
     width: 42%;
     margin-top: 30px;
     height: 100%;
- 
   }
 
   .create-furniture {
     height: 10%;
-    background-color: rgba(255, 255, 255, 0.661);
+    /* background-color: rgba(255, 255, 255, 0.661); */
     margin-bottom: 4px;
-    
   }
 
   .form-create h2 {
@@ -322,11 +320,9 @@ button:focus {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   }
 
-
   .input-error-container {
     height: 18%;
     margin-bottom: 6px;
-    
   }
 
   .form-error-container {
@@ -345,9 +341,8 @@ button:focus {
   }
 
   .create-cancel-btns {
-   margin-top: 12px;
-}
-
+    margin-top: 12px;
+  }
 
   .form-create .btn-create,
   .form-create .btn-cancel {
@@ -408,12 +403,78 @@ button:focus {
 }
 
 @media (max-width: 360px) {
-
   #create .create-form-conainter {
     width: 80%;
     margin-top: 0px;
     height: 90%;
+  }
+
+  .form-create {
+    background-color: #ffcf915c;
+  }
+  .create-furniture {
+    height: 10%;
+    margin-bottom: 4px;
+  }
+
+  .form-create input::placeholder {
+    color: #77472b;
+    text-shadow: none;
+  }
+
+  .create-furniture {
+    height: 10%;
+    margin-bottom: 4px;
+  }
+
+  .form-create h2 {
+    font-size: 18px;
+    margin: 14px;
+    text-shadow: 4px 4px 10px #6f3f21;
+  }
+
+  .create-form-conainter .drop {
+    background-color: #93592c4c;
+    backdrop-filter: blur(0.5px);
+  }
+
+  .create-form-conainter .drops .drop-1 {
+    height: 60px;
+    width: 60px;
+    top: -20px;
+    left: -30px;
+  }
+
+  .create-form-conainter .drops .drop-2 {
+    bottom: 270px;
+    left: -30px;
 }
 
+.create-form-conainter .drops .drop-3 {
+  height: 70px;
+  width: 40px;
+  bottom: 40px;
+  right: -20px;
+}
 
+.create-form-conainter .drops .drop-4 {
+  height: 40px;
+  width: 70px;
+  top: -20px;
+  right: -20px;
+}
+
+.create-form-conainter .drops .drop-5 {
+  height: 80px;
+  width: 120px;
+  bottom: 400px;
+  left: 200px;
+}
+
+.create-form-conainter .drops .drop-7 {
+  height: 60px;
+  width: 80px;
+  top: 120px;
+  left: 40px;
+}
 }

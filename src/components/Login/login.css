@@ -30,6 +30,9 @@ body {
 
 .form-login {
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 20px;
   height: 100%;
   width: 80%;
@@ -83,7 +86,7 @@ body {
 .form-login input {
   font-size: 20px;
   background: transparent;
-  width: 70%;
+  width: 100%;
   padding: 20px;
   margin-bottom: 12px;
   border: none;
@@ -296,9 +299,8 @@ body {
   }
 
   .have-not-registered .register {
-      font-size: 18px;
-      font-weight: bold;
-    
+    font-size: 18px;
+    font-weight: bold;
   }
 
   #login .form-conainter .drop {
@@ -327,33 +329,103 @@ body {
     right: 10px;
   }
 
-  
+  #login .form-conainter .drop-4 {
+    height: 50px;
+    width: 90px;
+    top: -10px;
+    right: -10px;
+  }
+
+  #login .form-conainter .drop-5 {
+    height: 50px;
+    width: 50px;
+    bottom: 110px;
+    left: 65px;
+    z-index: 1;
+  }
+
+  #login .form-conainter .drop-6 {
+    width: 100px;
+    bottom: 20px;
+    left: -70px;
+  }
+
+  #login .form-conainter .drop-7 {
+    height: 40px;
+    width: 180px;
+    bottom: 260px;
+    left: -55px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 360px) {
+  #login .form-conainter {
+    width: 80%;
+    margin-top: 300px;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    flex-basis: 1 0 auto;
+  }
+
+  .form-login {
+    width: 100%;
+    height: 90%;
+  }
+
+  .login-input-error-container {
+    margin-top: 20px;
+    height: 14vh;
+  }
+
+  .login-input-error-container input {
+    font-size: 16px;
+    width: 100%;
+    padding: 14px;
+  }
+
+  .have-not-registered {
+    margin: 20px 0px;
+  }
+
+  #login .form-conainter .drop-1 {
+    left: -20px;
+    z-index: 1;
+}
+
+#login .form-conainter .drop-3 {
+  height: 60px;
+  width: 80px;
+  bottom: 140px;
+  right: -20px;
+}
+
 #login .form-conainter .drop-4 {
-  height: 50px;
-  width: 90px;
-  top: -10px;
-  right: -10px;
+  height: 80px;
+  width: 70px;
+  top: -20px;
+  right: -20px;
+  z-index: -1;
 }
 
-#login .form-conainter .drop-5 {
-  height: 50px;
-  width: 50px;
-  bottom: 110px;
-  left: 65px;
-  z-index: 1;
-}
+  #login .form-conainter .drop-5 {
+    bottom: 160px;
+    z-index: 1;
+  }
 
-#login .form-conainter .drop-6 {
-  width: 100px;
-  bottom: 20px;
-  left: -70px;
+  #login .form-conainter .drop-6 {
+    height: 40px;
+    width: 100px;
+    bottom: -20px;
+    left: -20px;
 }
 
 #login .form-conainter .drop-7 {
-  height: 40px;
-  width: 180px;
-  bottom: 260px;
-  left: -55px;
+  height: 60px;
+  width: 310px;
+  bottom: 280px;
+  left: -10px;
   z-index: -1;
 }
 }
