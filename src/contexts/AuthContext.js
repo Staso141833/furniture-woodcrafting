@@ -31,7 +31,6 @@ export const AuthProvider = ({ children }) => {
 
     try {
       const result = await authService.register(registerData);
-
       setAuth(result);
       navigate("/catalog");
     } catch (error) {

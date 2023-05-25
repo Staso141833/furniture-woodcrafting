@@ -19,8 +19,9 @@ body {
   position: relative;
   width: 32vw;
   height: 74%;
-  margin-top: 440px;
   left: 54%;
+  top: 50%;
+  margin-top: 440px;
   transform: translate(-50%, -50%);
 }
 
@@ -352,9 +353,10 @@ body {
     width: 80%;
     margin-top: 320px;
     top: 50%;
-    left: 48%;
+    left: 50%;
     transform: translate(-50%, -50%);
     flex-basis: 1 0 auto;
+
   }
 
   .form-register {
