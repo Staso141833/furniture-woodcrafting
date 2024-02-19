@@ -1,5 +1,6 @@
 # Furniture and woodcrafting
 
+*italic*
 An application where you can share your taste of furnitures made by natural wood.
 
 ## Features
