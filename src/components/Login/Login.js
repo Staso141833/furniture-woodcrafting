@@ -17,13 +17,7 @@ export const Login = () => {
   });
 
   const { onLoginSubmit } = useAuthContext();
-  const { values, changeHandler, onSubmit } = useForm(
-    {
-      [LoginFormKeys.Email]: "",
-      [LoginFormKeys.Password]: "",
-    },
-    onLoginSubmit
-  );
+  const { values, changeHandler, onSubmit } = useForm({[LoginFormKeys.Email]: "",[LoginFormKeys.Password]: ""},onLoginSubmit);
 
   const formValidate = (e) => {
     e.preventDefault();
@@ -101,7 +95,9 @@ export const Login = () => {
           <div className="have-not-registered">
             <p className="message">You haven't registered yet? </p>
             <i className="fas fa-angle-double-down"></i>
-            <Link to="/register"><span className="register">Register</span></Link>
+            <Link to="/register">
+              <span className="register">Register</span>
+            </Link>
           </div>
         </form>
 

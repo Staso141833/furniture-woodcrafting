@@ -17,12 +17,14 @@ export const FurnitureProvider = ({ children }) => {
 
   const onCreateFurnitureSubmit = async (data) => {
     const newFurniture = await furnitureService.create(data);
+    console.log(newFurniture);
 
     setFurnitures((state) => [...state, newFurniture]);
     navigate("/catalog");
   };
 
   const onFurnitureEditSubmit = async (values) => {
+    console.log(values);
     const result = await furnitureService.edit(values._id, values);
 
     setFurnitures((state) =>

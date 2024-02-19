@@ -119,6 +119,7 @@ body {
   z-index: 1;
   font-size: 18px;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .dropdown-content a {
@@ -131,6 +132,7 @@ body {
 .dropdown-content a:hover {
   background-color: #77472b;
   color: white;
+  overflow: hidden;
 }
 
 .dropdown:hover .dropdown-content {

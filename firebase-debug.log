@@ -1,0 +1,220 @@
+[debug] [2023-05-26T08:20:25.861Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:20:25.863Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:20:25.864Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:20:25.864Z] Platform:      win32
+[debug] [2023-05-26T08:20:25.864Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:20:25.866Z] Time:          Fri May 26 2023 11:20:25 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:20:25.866Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=49905380&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:20:30.053Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:21:51.462Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:21:51.464Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:21:51.464Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:21:51.465Z] Platform:      win32
+[debug] [2023-05-26T08:21:51.465Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:21:51.466Z] Time:          Fri May 26 2023 11:21:51 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:21:51.466Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=395147644&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:21:55.215Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:45:08.815Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:45:08.817Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:45:08.817Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:45:08.818Z] Platform:      win32
+[debug] [2023-05-26T08:45:08.818Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:45:08.824Z] Time:          Fri May 26 2023 11:45:08 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:45:08.824Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=694186547&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:45:11.228Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:45:17.964Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:45:17.966Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:45:17.967Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:45:17.967Z] Platform:      win32
+[debug] [2023-05-26T08:45:17.967Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:45:17.968Z] Time:          Fri May 26 2023 11:45:17 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:45:17.969Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=282522419&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:45:18.975Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:50:27.251Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:50:27.253Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:50:27.254Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:50:27.254Z] Platform:      win32
+[debug] [2023-05-26T08:50:27.254Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:50:27.255Z] Time:          Fri May 26 2023 11:50:27 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:50:27.256Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=56996122&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:50:32.308Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:50:40.546Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:50:40.548Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:50:40.549Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:50:40.549Z] Platform:      win32
+[debug] [2023-05-26T08:50:40.549Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:50:40.550Z] Time:          Fri May 26 2023 11:50:40 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:50:40.551Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=187699887&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:50:43.951Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-26T08:50:52.645Z] ----------------------------------------------------------------------
+[debug] [2023-05-26T08:50:52.647Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-26T08:50:52.647Z] CLI Version:   12.2.1
+[debug] [2023-05-26T08:50:52.648Z] Platform:      win32
+[debug] [2023-05-26T08:50:52.648Z] Node Version:  v16.13.2
+[debug] [2023-05-26T08:50:52.649Z] Time:          Fri May 26 2023 11:50:52 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-26T08:50:52.649Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=362510070&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-26T08:50:53.576Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-30T07:52:49.398Z] ----------------------------------------------------------------------
+[debug] [2023-05-30T07:52:49.400Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-30T07:52:49.401Z] CLI Version:   12.2.1
+[debug] [2023-05-30T07:52:49.401Z] Platform:      win32
+[debug] [2023-05-30T07:52:49.401Z] Node Version:  v16.13.2
+[debug] [2023-05-30T07:52:49.405Z] Time:          Tue May 30 2023 10:52:49 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-30T07:52:49.405Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-30T07:52:49.409Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[debug] [2023-05-30T07:52:49.798Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-30T07:52:49.799Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=230425928&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-30T07:53:33.785Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-05-31T14:52:26.079Z] ----------------------------------------------------------------------
+[debug] [2023-05-31T14:52:26.081Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-05-31T14:52:26.082Z] CLI Version:   12.2.1
+[debug] [2023-05-31T14:52:26.082Z] Platform:      win32
+[debug] [2023-05-31T14:52:26.082Z] Node Version:  v16.13.2
+[debug] [2023-05-31T14:52:26.093Z] Time:          Wed May 31 2023 17:52:26 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-05-31T14:52:26.094Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-31T14:52:26.100Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[debug] [2023-05-31T14:52:26.470Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-31T14:52:26.470Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=32225273&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-05-31T14:54:27.992Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-06-01T08:06:29.705Z] ----------------------------------------------------------------------
+[debug] [2023-06-01T08:06:29.708Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Petq\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2023-06-01T08:06:29.708Z] CLI Version:   12.2.1
+[debug] [2023-06-01T08:06:29.708Z] Platform:      win32
+[debug] [2023-06-01T08:06:29.709Z] Node Version:  v16.13.2
+[debug] [2023-06-01T08:06:29.714Z] Time:          Thu Jun 01 2023 11:06:29 GMT+0300 (Източноевропейско лятно часово време)
+[debug] [2023-06-01T08:06:29.715Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=702049677&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2023-06-01T08:06:32.186Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:282:19)
+    at onErrorNT (node:internal/child_process:477:16)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.

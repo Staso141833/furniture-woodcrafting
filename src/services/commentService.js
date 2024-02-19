@@ -10,8 +10,10 @@ export const getAll = async (furnitureId) => {
   const result = await request.get(
     `${baseUrl}?where=${searchQuery}&load=${relationQuery}`
   );
-  const comments = Object.values(result);
 
+  console.log(result)   
+  const comments = Object.values(result);
+ 
   return comments;
 };
 
@@ -20,3 +22,4 @@ export const create = async (furnitureId, comment) => {
 
   return result;
 };
+ 

@@ -1,3 +1,5 @@
+import { db } from "../../config/firebase.js";
+
 import "./create.css";
 
 import { useForm } from "../../hooks/useForm.js";
@@ -136,7 +138,7 @@ export const Create = () => {
                 type="number"
                 name="price"
                 id="price"
-                placeholder="example 159.99"
+                placeholder="Price (f. e. 159.99)"
                 value={values.price}
                 onChange={changeHandler}
               />

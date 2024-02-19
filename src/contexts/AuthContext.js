@@ -40,9 +40,9 @@ export const AuthProvider = ({ children }) => {
 
   const onLogout = async (successCallback) => {
     try {
-      const token = auth.accessToken;
+      // const token = auth.accessToken;
 
-      await authService.logout(token);
+      await authService.logout(); // await authService.logout(token);
 
       successCallback();
       setAuth({});
@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
       console.log("There is a problem!");
     }
   };
-
+ 
   const contextValues = {
     onLoginSubmit,
     onRegisterSubmit,

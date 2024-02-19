@@ -31,6 +31,7 @@ export const Details = () => {
         ...furnitureData,
         comments,
       };
+      console.log(furnitureState)
       dispatch({ type: "FURNITURE_FETCH", payload: furnitureState });
     });
   }, [furnitureId]);
@@ -39,7 +40,7 @@ export const Details = () => {
 
   const onCommentSubmit = async (values) => {
     const response = await commentService.create(furnitureId, values.comment);
-
+    console.log(response);
     dispatch({
       type: "COMMENT_ADD",
       payload: response,
@@ -47,6 +48,8 @@ export const Details = () => {
     });
   };
 
+  console.log(furniture)
+ 
   const onDeleteClick = async () => {
     const result = "Are you sure you want to delete this furniture?";
 
@@ -58,7 +61,7 @@ export const Details = () => {
       navigate("/catalog");
     }
   };
-
+console.log(furniture)
   return (
     <section id="details">
       <div id="details-comments">

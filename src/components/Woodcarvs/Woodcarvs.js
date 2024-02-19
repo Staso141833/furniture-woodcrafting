@@ -20,9 +20,9 @@ export const Woodcarvs = () => {
           />
         </div>
 
-        <div className="picture-woodcarv">
+        {/* <div className="picture-woodcarv">
           <img src="./lionNatural.jpg" alt="woodcarv" />
-        </div>
+        </div> */}
 
         <div className="picture-woodcarv">
           <img
