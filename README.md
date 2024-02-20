@@ -15,6 +15,7 @@
 - Comment post (only for logged in users);
 - Edit post (only for post's owner);
 - Delete post(only for post's owner);
+- Responsive design;
 
 ## Built with:
 
