@@ -11,7 +11,7 @@
 - Woodcarvs page(products of our own family business);
 - Catalog page(all users' posts);
 - Create Product page(only for logged in users);
-- Post details (upvote and see post's details);
+- Post details (see post's details);
 - Comment post (only for logged in users);
 - Edit post (only for post's owner);
 - Delete post(only for post's owner);
